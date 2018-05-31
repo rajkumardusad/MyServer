@@ -1,0 +1,13 @@
+# Tool Name :- MyServer
+# Author :- Rajkumar Dusad
+# Date :- 23/5/2018
+# Powered By :- Aex Software's
+
+sudo apt install zip unzip -y
+apt install zip unzip -y
+pkg install zip unzip -y
+unzip MyServer.zip
+rm -rf MyServer.zip
+sudo rm -rf MyServer.zip
+cd MyServer && sh install
+exit

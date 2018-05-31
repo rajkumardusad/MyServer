@@ -10,4 +10,7 @@ unzip MyServer.zip
 rm -rf MyServer.zip
 sudo rm -rf MyServer.zip
 cd MyServer && sh install
+if [ -d  ~/.MyServer ];then
+   rm -rf ~/MyServer
+fi
 exit

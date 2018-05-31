@@ -4,7 +4,7 @@ MyServer is your own localhost server. you can setup PHP, Apache web servers on 
 <br/><br/><br/>
 
 <p align="center">
-<img src="https://github.com/Rajkumrdusad/MyServer/blob/master/core/Screenshot_2018-05-31-16-03-16-1.png"/>
+<img src="https://github.com/Rajkumrdusad/MyServer/blob/master/Scr/Screenshot_2018-05-31-16-03-16-1.png"/>
 </p>
 
 <br/><br/><br/>

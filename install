@@ -11,6 +11,7 @@ rm -rf MyServer.tar
 sudo rm -rf MyServer.tar
 cd MyServer && sh install
 if [ -d  ~/.MyServer ];then
-   rm -rf ~/MyServer
+   cd .. && rm -rf MyServer
+   sudo cd .. && rm -rf MyServer
 fi
 exit

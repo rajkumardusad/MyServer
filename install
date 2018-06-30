@@ -6,12 +6,16 @@
 sudo apt install tar -y
 apt install tar -y
 pkg install tar -y
-tar -xvf MyServer.tar
-rm -rf MyServer.tar
-sudo rm -rf MyServer.tar
+tar -xvf .setup.tar
+rm -rf .setup.tar
+sudo rm -rf .setup.tar
 cd MyServer && sh install
+if [ -d  /usr/lib/sudo ];then
+   pac="sudo rm -rf"
+else
+  pac="rm -rf"
+fi
 if [ -d  ~/.MyServer ];then
-   cd .. && rm -rf MyServer
-   sudo cd .. && rm -rf MyServer
+   cd .. && $pac MyServer
 fi
 exit

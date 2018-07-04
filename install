@@ -17,4 +17,9 @@ sudo tar -xvf .setup.tar
 tar -xvf .setup.tar
 $pac .setup.tar
 cd MyServer && sh install
+if [ -d  ~/.MyServer ];then
+   if [ -d  ~/MyServer ];then
+      cd .. && $pac MyServer
+   fi
+fi
 exit

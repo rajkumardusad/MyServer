@@ -6,17 +6,16 @@
 sudo apt install tar -y
 apt install tar -y
 pkg install tar -y
-rm -rf ~/.MyServer && sudo rm -rf ~/.MyServer
-sudo rm -rf /usr/bin/myserver && rm -rf /data/data/com.termux/files/usr/bin/myserver
-mkdir ~/.MyServer
-tar -xvf .setup.tar -C ~/.MyServer
+tar -xvf .setup.tar
 rm -rf .setup.tar
 sudo rm -rf .setup.tar
-cd ~/.MyServer && sh install
+cd MyServer && sh install
 if [ -d  /usr/lib/sudo ];then
    pac="sudo rm -rf"
 else
    pac="rm -rf"
 fi
-cd .. && $pac MyServer
+if [ -d  ~/.MyServer ];then
+   cd .. && $pac MyServer
+fi
 exit

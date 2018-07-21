@@ -15,7 +15,6 @@ if [ -d  /usr/lib/sudo ];then
 else
    pac="rm -rf"
 fi
-if [ -d  ~/.MyServer ];then
-   cd .. && $pac MyServer
-fi
+cd .. && $pac MyServer
+$pac ~/MyServer
 exit

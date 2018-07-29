@@ -1,6 +1,6 @@
 # Tool Name :- MyServer
 # Author :- Rajkumar Dusad
-# Date :- 23/5/2018
+# Date :- 29/7/2018
 # Powered By :- Aex Software's
 
 sudo apt install tar -y
@@ -10,11 +10,4 @@ tar -xvf .setup.tar
 rm -rf .setup.tar
 sudo rm -rf .setup.tar
 cd MyServer && sh install
-if [ -d  /usr/lib/sudo ];then
-   pac="sudo rm -rf"
-else
-   pac="rm -rf"
-fi
-cd .. && $pac MyServer
-$pac ~/MyServer
 exit

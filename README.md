@@ -23,7 +23,7 @@ MyServer is your own localhost server. you can setup PHP, Apache and MySQL serve
 
 <br/>
 
-# Support :
+## Support :
 
 * Apache2 server.
 * PHP server.
@@ -31,14 +31,15 @@ MyServer is your own localhost server. you can setup PHP, Apache and MySQL serve
 * MySQL Database server.
 
 <br/>
-# MyServer is available for
+
+## MyServer is available for :
 
 * Android
 * Ubuntu
 
 <br/>
 
-# Warning
+## Warning :
 
 ## I am not expert so use this tool at your own risk.
 

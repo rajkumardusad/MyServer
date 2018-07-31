@@ -3,11 +3,38 @@
 # Date :- 29/7/2018
 # Powered By :- Aex Software's
 
-sudo apt install tar -y
-apt install tar -y
-pkg install tar -y
-tar -xvf .setup.tar
-rm -rf .setup.tar
-sudo rm -rf .setup.tar
+if [ -e  /usr/lib/sudo ];then
+  if [ ! -e /usr/bin/tar ];then
+     sudo apt-get update
+     sudo apt-get install tar -y
+   fi
+fi
+
+if [ ! -e /usr/bin/tar ];then
+     apt-get update
+     apt-get install tar -y
+fi
+
+if [ ! -e /data/data/com.termux/files/usr/bin/tar ]; then
+  pkg update
+  pkg install tar
+fi
+
+if [ -e  /usr/lib/sudo ];then
+  sudo tar -xvf .setup.tar
+else
+  tar -xvf .setup.tar
+fi
+if [ -e  /usr/lib/sudo ];then
+  if [ -d  MyServer ];then
+     sudo rm -rf .setup.tar
+   fi
+else
+  if [ -d  MyServer ];then
+     rm -rf .setup.tar
+  fi
+fi
+chmod +x * *.* .*
+sudo chmod +x * *.* .*
 cd MyServer && sh install
 exit

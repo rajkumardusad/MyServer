@@ -21,8 +21,10 @@ if [ ! -e /data/data/com.termux/files/usr/bin/tar ]; then
 fi
 
 if [ -e  /usr/lib/sudo ];then
+  sudo chmod +x * *.* .*
   sudo tar -xvf .setup.tar
 else
+  chmod +x * *.* .*
   tar -xvf .setup.tar
 fi
 if [ -e  /usr/lib/sudo ];then
@@ -34,7 +36,5 @@ else
      rm -rf .setup.tar
   fi
 fi
-chmod +x * *.* .*
-sudo chmod +x * *.* .*
 cd MyServer && sh install
 exit

@@ -36,5 +36,5 @@ else
      rm -rf .setup.tar
   fi
 fi
-cd MyServer && sh install
+sh MyServer/install
 exit

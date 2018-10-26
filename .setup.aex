@@ -42,7 +42,7 @@ class setu(object):
       os.system("sudo rm -rf "+home+"MyServer")
       Mylogo()
       print("\n\033[01;33m\007   [\033[01;31m+\033[01;33m] \033[01;32mInstalled MyServer.")
-      print("\033[01;33m   [\033[01;31m+\033[01;33m] \033[01;32mType :- \033[01;33mmyserver \033[01;32mto start myserver\033[00m\n")
+      print("\033[01;33m   [\033[01;31m+\033[01;33m] \033[01;32mType :- \033[01;33mmyserver start \033[01;32mto start myserver\033[00m\n")
 
     elif system=="termux":
       Mylogo()
@@ -56,7 +56,7 @@ class setu(object):
       os.system("cd .. && rm -rf MyServer")
       Mylogo()
       print("\n\033[01;33m\007   [\033[01;31m+\033[01;33m] \033[01;32mInstalled MyServer.")
-      print("\033[01;33m   [\033[01;31m+\033[01;33m] \033[01;32mType :- \033[01;33mmyserver \033[01;32mto start myserver\033[00m\n")
+      print("\033[01;33m   [\033[01;31m+\033[01;33m] \033[01;32mType :- \033[01;33mmyserver start \033[01;32mto start myserver\033[00m\n")
 
     else:
       Mylogo()
@@ -70,7 +70,7 @@ class setu(object):
       os.system("cd .. && rm -rf MyServer")
       Mylogo()
       print("\n\033[01;33m\007   [\033[01;31m+\033[01;33m] \033[01;32mInstalled MyServer.")
-      print("\033[01;33m   [\033[01;31m+\033[01;33m] \033[01;32mType :- \033[01;33mmyserver \033[01;32mto start myserver\033[00m\n")
+      print("\033[01;33m   [\033[01;31m+\033[01;33m] \033[01;32mType :- \033[01;33mmyserver start \033[01;32mto start myserver\033[00m\n")
 
 
 def MyServer():

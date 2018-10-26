@@ -38,15 +38,19 @@ class pyweb(object):
           os.system("cp "+home+".MyServer/modules/index.sh "+gp)
           os.system("cd "+gp+" && sh index.sh")
           os.system("cd "+gp+" && rm index.sh")
-        else:
+        elif system=="ubuntu":
           os.system("sudo cp "+home+".MyServer/modules/index.sh "+gp)
           os.system("cd "+gp+" && sudo sh index.sh")
           os.system("cd "+gp+" && sudo rm index.sh")
+        else:
+          os.system("cp "+home+".MyServer/modules/index.sh "+gp)
+          os.system("cd "+gp+" && sh index.sh")
+          os.system("cd "+gp+" && rm index.sh")
       Mylogo()
       print("\n\033[01;33mStarting Server ......\033[00m\n")
-      print("\n \033[01;33mYour Server URL is :- \033[01;36mhttp://localhost:"+port+"/ \n http://127.0.0.1:"+port+"/\033[00m\n")
+      print("\033[01;33mYour Server URL is :- \033[01;36mhttp://localhost:"+port+"/ \n http://127.0.0.1:"+port+"/\033[00m\n")
       os.system("cd "+gp+" && python2 -m SimpleHTTPServer "+port)
-      print("\033[01;31m unfortunately server stopped\n\033[00m")
+      print("\033[01;31munfortunately server stopped\n\033[00m")
       ex()
     else:
       self.srvr()
@@ -79,6 +83,9 @@ class pyweb(object):
       sport=open(spath+".port.aex","w")
       sport.write(port)
       sport.close()
+      shost=open(spath+".host.aex","w")
+      shost.write("localhost")
+      shost.close()
     os.system("python2 ~/.MyServer/modules/.srvr.aex")
     Mylogo()
     print("\n\033[01;33mStarting Server ......\033[00m\n")
@@ -95,13 +102,17 @@ class pyweb(object):
         os.system("cp "+home+".MyServer/modules/index.sh "+gp)
         os.system("cd "+gp+" && sh index.sh")
         os.system("cd "+gp+" && rm index.sh")
-      else:
+      elif system=="ubuntu":
         os.system("sudo cp "+home+".MyServer/modules/index.sh "+gp)
         os.system("cd "+gp+" && sudo sh index.sh")
         os.system("cd "+gp+" && sudo rm index.sh")
-    print("\n \033[01;33mYour Server URL is :- \033[01;36mhttp://localhost:"+port+"/ \n http://127.0.0.1:"+port+"/\033[00m\n")
+      else:
+        os.system("cp "+home+".MyServer/modules/index.sh "+gp)
+        os.system("cd "+gp+" && sh index.sh")
+        os.system("cd "+gp+" && rm index.sh")
+    print("\033[01;33mYour Server URL is :- \033[01;36mhttp://localhost:"+port+"/ \n http://127.0.0.1:"+port+"/\033[00m\n")
     os.system("cd "+gp+" && python2 -m SimpleHTTPServer "+port)
-    print("\n\033[01;31m unfortunately server stopped\n\033[00m")
+    print("\033[01;31munfortunately server stopped\n\033[00m")
     ex()
 
 class apache(object):
@@ -162,7 +173,11 @@ class Manual(object):
       mslogo()
       Tool = raw_input(''' \033[0;33m\033[4;mMyServer\033[00m\033[01;31m > \033[1;36m''')
       if Tool == "1":
-        php()
+        if os.path.exists(bpath+"php"):
+          php()
+        else:
+          pyweb().chkpy()
+          break
       elif Tool == "2":
         php()
       elif Tool == "3":

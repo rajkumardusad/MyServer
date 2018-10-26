@@ -13,7 +13,7 @@ from php import *
 from open import *
 from local import *
 from Mhost import Mhost
-from MServer import MServer
+from MServer import *
 from Mys import Mys
 from sett import setting
 
@@ -93,7 +93,10 @@ class main(object):
       logo()
       Tool = raw_input(''' \033[0;33m\033[4;mMyServer\033[00m\033[01;31m > \033[1;36m''')
       if Tool == "1":
-        php()
+        if os.path.exists(bpath+"php"):
+          php()
+        else:
+          pyweb().chkpy()
       elif Tool == "2":
         if system=="termux":
           open()

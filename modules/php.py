@@ -52,10 +52,14 @@ class phpserver(object):
           os.system("cp "+home+".MyServer/modules/index.sh "+getpat)
           os.system("cd "+getpat+" && sh index.sh")
           os.system("cd "+getpat+" && rm index.sh")
-        else:
+        elif system=="ubuntu":
           os.system("sudo cp "+home+".MyServer/modules/index.sh "+getpat)
           os.system("cd "+getpat+" && sudo sh index.sh")
           os.system("cd "+getpat+" && sudo rm index.sh")
+        else:
+          os.system("cp "+home+".MyServer/modules/index.sh "+getpat)
+          os.system("cd "+getpat+" && sh index.sh")
+          os.system("cd "+getpat+" && rm index.sh")
       os.system("php -S "+host+":"+getp+" -t "+getpat)
       print("\033[01;31m unfortunately server stopped\n\033[00m")
       ex()
@@ -116,10 +120,14 @@ class phpserver(object):
         os.system("cp "+home+".MyServer/modules/index.sh "+pat)
         os.system("cd "+pat+" && sh index.sh")
         os.system("cd "+pat+" && rm index.sh")
-      else:
+      elif system=="ubuntu":
         os.system("sudo cp "+home+".MyServer/modules/index.sh "+pat)
         os.system("cd "+pat+" && sudo sh index.sh")
         os.system("cd "+pat+" && sudo rm index.sh")
+      else:
+        os.system("cp "+home+".MyServer/modules/index.sh "+pat)
+        os.system("cd "+pat+" && sh index.sh")
+        os.system("cd "+pat+" && rm index.sh")
     os.system("php -S "+hostn+":"+port+" -t "+pat)
     print("\n\033[01;31m unfortunately server stopped\n\033[00m")
     ex()

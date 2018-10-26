@@ -12,14 +12,14 @@ MyServer is your own localhost server. you can setup PHP, Apache and MySQL serve
 # How to use ?
 
 **CLI Use :**
-- **`myserver -s <hostname> <port> <document_roit_path>`** to start default localhost server.
-- **`myserver -s -php <hostname> <port> <document_roit_path>`** to start php localhost server.
-- **`myserver -s -py <hostname> <port> <document_roit_path>`** to start python localhost server.
-- **`myserver -s -apa <hostname> <port> <document_roit_path>`** to start apache localhost server.
-- **`myserver -h <domainname> <localhost_port> <http_port/https_port>`** to access localhost server on internet.
-- **`myserver update update`** MyServer.
-- **`myserver rm -t`** uninstall MyServer.
-- **`myserver start`** start MyServer menu.
+- **myserver -s <hostname> <port> <document_roit_path>** to start default localhost server.
+- **myserver -s -php <hostname> <port> <document_roit_path>** to start php localhost server.
+- **myserver -s -py <hostname> <port> <document_roit_path>** to start python localhost server.
+- **myserver -s -apa <hostname> <port> <document_roit_path>** to start apache localhost server.
+- **myserver -h <domainname> <localhost_port> <http_port/https_port>** to access localhost server on internet.
+- **myserver update update** MyServer.
+- **myserver rm -t** uninstall MyServer.
+- **myserver start** start MyServer menu.
   
 **menual Use :**
 - Type 1 : to start your localhost web server.

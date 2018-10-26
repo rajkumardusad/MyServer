@@ -12,8 +12,8 @@ from logo import *
 
 class pyweb(object):
   def srvr(self):
-    gp=sys.argv[2]
     port=sys.argv[3]
+    gp=sys.argv[4]
     os.system("python2 ~/.MyServer/modules/.srvr.aex")
     Mylogo()
     print("\n\033[01;33mStarting Server ......\033[00m\n")
@@ -30,13 +30,17 @@ class pyweb(object):
         os.system("cp "+home+".MyServer/modules/index.sh "+gp)
         os.system("cd "+gp+" && sh index.sh")
         os.system("cd "+gp+" && rm index.sh")
-      else:
+      elif system=="ubuntu":
         os.system("sudo cp "+home+".MyServer/modules/index.sh "+gp)
         os.system("cd "+gp+" && sudo sh index.sh")
         os.system("cd "+gp+" && sudo rm index.sh")
-    print("\n \033[01;33mYour Server URL is :- \033[01;36mhttp://localhost:"+port+"/ \n http://127.0.0.1:"+port+"/\033[00m\n")
+      else:
+        os.system("cp "+home+".MyServer/modules/index.sh "+gp)
+        os.system("cd "+gp+" && sh index.sh")
+        os.system("cd "+gp+" && rm index.sh")
+    print("\033[01;33mYour Server URL is :- \033[01;36mhttp://localhost:"+port+"/ \n http://127.0.0.1:"+port+"/\033[00m\n")
     os.system("cd "+gp+" && python2 -m SimpleHTTPServer "+port)
-    print("\n\007\033[01;31m unfortunately server stopped\n\033[00m")
+    print("\n\007\033[01;31munfortunately server stopped\n\033[00m")
     ex()
 
 class apache(object):
@@ -55,7 +59,7 @@ class apache(object):
       self.apa()
     else:
       Mylogo()
-      print("\n\n\007\033[01;31m  Error \033[01;33mApache \033[01;31mNot installed.")
+      print("\n\n\007\033[01;31m  Error \033[01;33mApache \033[01;31mNot installed.\033[00m")
       ex()
 
   def apa(self):
@@ -74,7 +78,7 @@ class apache(object):
 
     elif os.path.exists("/usr/sbin/apachectl"):
       print("\n\n \007\033[01;33m Apache web server\033[01;32m is running .....")
-      stop=raw_input(" \033[01;33m Press \033[01;36m0\033[01;33m to stop server >>\033[01;36m ");
+      stop=raw_input(" \033[01;33m Press \033[01;36m0\033[01;33m to stop server >>\033[00m ");
       if stop=="0":
         os.system("apachectl stop")
         sleep(4)
@@ -84,7 +88,7 @@ class apache(object):
 
     elif os.path.exists("/usr/sbin/apache2"):
       print("\n\n \007\033[01;33m Apache web server\033[01;32m is running .....")
-      stop=raw_input(" \033[01;33m Press \033[01;36m0\033[01;33m to stop server >>\033[01;36m ");
+      stop=raw_input(" \033[01;33m Press \033[01;36m0\033[01;33m to stop server >>\033[00m ");
       if stop=="0":
         os.system("apache2 stop")
         sleep(4)
@@ -98,7 +102,7 @@ class phpserver(object):
       self.phps()
     else:
       Mylogo()
-      print("\n\n\033[01;31m  Sorry we can't install \033[01;33mPHP\033[01;31m in your "+system+".")
+      print("\n\n\033[01;31m  Sorry we can't install \033[01;33mPHP\033[01;31m in your "+system+".\033[00m")
       sleep(3)
 
   def phps(self):
@@ -121,10 +125,14 @@ class phpserver(object):
         os.system("cp "+home+".MyServer/modules/index.sh "+pat)
         os.system("cd "+pat+" && sh index.sh")
         os.system("cd "+pat+" && rm index.sh")
-      else:
+      elif system=="ubuntu":
         os.system("sudo cp "+home+".MyServer/modules/index.sh "+pat)
         os.system("cd "+pat+" && sudo sh index.sh")
         os.system("cd "+pat+" && sudo rm index.sh")
+      else:
+        os.system("cp "+home+".MyServer/modules/index.sh "+pat)
+        os.system("cd "+pat+" && sh index.sh")
+        os.system("cd "+pat+" && rm index.sh")
     os.system("php -S "+hostn+":"+port+" -t "+pat)
     print("\n\007\033[01;31m unfortunately server stopped\n\033[00m")
     ex()
@@ -164,4 +172,7 @@ elif sys.argv[1]=="-apa":
 elif sys.argv[1]=="-py":
   pyweb().srvr()
 elif sys.argv[1]=="-d":
-  php()
+  if os.path.exists(bpath+"php"):
+    php()
+  else:
+    pyweb().srvr()

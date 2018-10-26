@@ -11,19 +11,19 @@ case $1 in
         python2 ~/.MyServer/core/server.py -php $3 $4 $5
       ;;
       -py)
-        python2 ~/.MyServer/core/server.py -py $5 $4
+        python2 ~/.MyServer/core/server.py -py $3 $4 $5
       ;;
       -apa)
         python2 ~/.MyServer/core/server.py -apa
-      ;;
-      -d)
-        python2 ~/.MyServer/core/server.py -d $3 $4 $5
       ;;
       *)
         echo "error : invalid arguments !!"
         echo "use : myserver --help  for more information"
       ;;
       esac
+    ;;
+    4)
+      python2 ~/.MyServer/core/server.py -d $2 $3 $4
     ;;
     *)
       echo "error : invalid arguments !!"
@@ -68,7 +68,7 @@ case $1 in
     echo "Usage: myserver [command]... [arguments]..."
     echo ""
     echo " Commands:"
-    echo " -s -d <hostname> <port> <path>         to start default localhost server."
+    echo " -s <hostname> <port> <path>            to start default localhost server."
     echo " -s -php <hostname> <port> <path>       to start php localhost server."
     echo " -s -py <hostname> <port> <path>        to start python localhost server."
     echo " -s -apa <hostname> <port> <path>       to start apache localhost server."

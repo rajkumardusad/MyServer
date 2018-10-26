@@ -12,11 +12,11 @@ MyServer is your own localhost server. you can setup PHP, Apache and MySQL serve
 # How to use ?
 
 **CLI Use :**
-- **myserver -s <hostname> <port> <document_roit_path>** to start default localhost server.
-- **myserver -s -php <hostname> <port> <document_roit_path>** to start php localhost server.
-- **myserver -s -py <hostname> <port> <document_roit_path>** to start python localhost server.
-- **myserver -s -apa <hostname> <port> <document_roit_path>** to start apache localhost server.
-- **myserver -h <domainname> <localhost_port> <http_port/https_port>** to access localhost server on internet.
+- **myserver -s <hostname/ip> <localhost_port> <document_root_path>** to start default localhost server.
+- **myserver -s -php <hostname/ip> <localhost_port> <document_root_path>** to start php localhost server.
+- **myserver -s -py <hostname/ip> <localhost_port> <document_root_path>** to start python localhost server.
+- **myserver -s -apa <hostname/ip> <localhost_port> <document_root_path>** to start apache localhost server.
+- **myserver -h <domain_name> <localhost_port> <http_port/https_port>** to access localhost server on internet.
 - **myserver update update** MyServer.
 - **myserver rm -t** uninstall MyServer.
 - **myserver start** start MyServer menu.
@@ -33,6 +33,7 @@ MyServer is your own localhost server. you can setup PHP, Apache and MySQL serve
 - Type x : to exit.
 
 <br/>
+
 ## Support :
 
 * Apache2 server.
@@ -41,12 +42,14 @@ MyServer is your own localhost server. you can setup PHP, Apache and MySQL serve
 * MySQL Database server.
 
 <br/>
+
 ## MyServer is available for :
 
 * Android
 * Ubuntu
 
 <br/>
+
 **Warning :**
 
 ***I am not expert so use this tool at your own risk.***

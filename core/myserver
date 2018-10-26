@@ -16,9 +16,6 @@ case $1 in
       -apa)
         python2 ~/.MyServer/core/server.py -apa
       ;;
-      -ng)
-        python2 ~/.MyServer/core/server.py -ng
-      ;;
       -d)
         python2 ~/.MyServer/core/server.py -d $3 $4 $5
       ;;
@@ -75,7 +72,21 @@ case $1 in
     echo " -s -php <hostname> <port> <path>       to start php localhost server."
     echo " -s -py <hostname> <port> <path>        to start python localhost server."
     echo " -s -apa <hostname> <port> <path>       to start apache localhost server."
-    echo " -s -ng <hostname> <port> <path>        to start nginx localhost server."
+    echo " -h <hostname> <localhost_port> <port>  to access localhost server on internet."
+    echo " update                                 update MyServer."
+    echo " rm -t                                  uninstall MyServer."
+    echo " start                                  start MyServer menu."
+    echo ""
+  ;;
+
+  help)
+    echo "Usage: myserver [command]... [arguments]..."
+    echo ""
+    echo " Commands:"
+    echo " -s -d <hostname> <port> <path>         to start default localhost server."
+    echo " -s -php <hostname> <port> <path>       to start php localhost server."
+    echo " -s -py <hostname> <port> <path>        to start python localhost server."
+    echo " -s -apa <hostname> <port> <path>       to start apache localhost server."
     echo " -h <hostname> <localhost_port> <port>  to access localhost server on internet."
     echo " update                                 update MyServer."
     echo " rm -t                                  uninstall MyServer."

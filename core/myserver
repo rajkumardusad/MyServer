@@ -38,7 +38,7 @@ case $1 in
   -h)
     case $# in
     4)
-      python2 ~/.MyServer/core/host.py -d $2 $3 $4
+      python2 ~/.MyServer/core/host.py $2 $3 $4
     ;;
     *)
       echo "error : invalid arguments"

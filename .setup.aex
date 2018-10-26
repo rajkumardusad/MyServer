@@ -1,0 +1,93 @@
+# Tool Name :- MyServer
+# Author :- Rajkumar Dusad
+# Date :- 29/7/2018
+# Powered By :- Aex Software's
+
+import sys
+import os
+from time import sleep
+from modules.system import *
+from modules.ux import *
+from modules.logo import *
+
+class setu(object):
+  def rem(self):
+    if os.path.exists(bpath+"myserver"):
+      if system=="ubuntu":
+        os.system("sudo rm -rf ~/.MyServer && rm -rf "+bpath+"myserver")
+        os.system("cd "+spath+" && sudo rm -rf .path.aex .port.aex .host.aex")
+      else:
+        os.system("rm -rf ~/.MyServer && rm -rf "+bpath+"myserver")
+        os.system("cd "+spath+" && rm -rf .path.aex .port.aex .host.aex")
+    else:
+      if system=="ubuntu":
+        os.system("sudo rm -rf ~/.MyServer && rm -rf "+bpath+"myserver")
+        os.system("cd "+spath+" && sudo rm -rf .path.aex .port.aex .host.aex")
+      else:
+        os.system("rm -rf ~/.MyServer && rm -rf "+bpath+"myserver")
+        os.system("cd "+spath+" && rm -rf .path.aex .port.aex .host.aex")
+
+  def setup(self):
+    self.rem()
+    if system=="ubuntu":
+      Mylogo()
+      print("\n\033[01;33m\007Installing MyServer .....\n")
+      os.system("sudo mkdir ~/.MyServer")
+      os.system("sudo mv -v core/myserver /usr/bin")
+      os.system("sudo mv -v core modules MyServer.py ~/.MyServer")
+      os.system("sudo chmod +x /usr/bin/myserver")
+      os.system("sudo chmod +x ~/.MyServer/MyServer.py")
+      os.system("cd .. && cd .. && sudo rm -rf MyServer")
+      os.system("cd .. && cd .. && sudo rm -rf MyServer")
+      os.system("cd .. && sudo rm -rf MyServer")
+      os.system("sudo rm -rf ~/MyServer")
+      os.system("sudo rm -rf "+home+"MyServer")
+      Mylogo()
+      print("\n\033[01;33m\007   [\033[01;31m+\033[01;33m] \033[01;32mInstalled MyServer.")
+      print("\033[01;33m   [\033[01;31m+\033[01;33m] \033[01;32mType :- \033[01;33mmyserver \033[01;32mto start myserver\033[00m\n")
+
+    elif system=="termux":
+      Mylogo()
+      print("\n\033[01;33m\007Installing MyServer .....\n")
+      os.system("mv -v core/myserver /data/data/com.termux/files/usr/bin")
+      os.system("chmod +x /data/data/com.termux/files/usr/bin/myserver")
+      os.system("mkdir ~/.MyServer")
+      os.system("mv -v MyServer.py core modules ~/.MyServer")
+      os.system("chmod +x ~/.MyServer/MyServer.py")
+      os.system("cd .. && cd .. && rm -rf MyServer")
+      os.system("rm -rf ~/MyServer")
+      os.system("cd .. && rm -rf MyServer")
+      Mylogo()
+      print("\n\033[01;33m\007   [\033[01;31m+\033[01;33m] \033[01;32mInstalled MyServer.")
+      print("\033[01;33m   [\033[01;31m+\033[01;33m] \033[01;32mType :- \033[01;33mmyserver \033[01;32mto start myserver\033[00m\n")
+
+    else:
+      Mylogo()
+      print("\n\033[01;33m\007Installing MyServer .....\n")
+      os.system("mkdir ~/.MyServer")
+      os.system("mv -v core/myserver /usr/bin")
+      os.system("mv -v core modules MyServer.py ~/.MyServer")
+      os.system("chmod +x /usr/bin/myserver")
+      os.system("chmod +x ~/.MyServer/MyServer.py")
+      os.system("cd .. && cd .. && rm -rf MyServer")
+      os.system("cd .. && cd .. && rm -rf MyServer")
+      os.system("rm -rf "+home+"MyServer")
+      os.system("cd .. && rm -rf MyServer")
+      Mylogo()
+      print("\n\033[01;33m\007   [\033[01;31m+\033[01;33m] \033[01;32mInstalled MyServer.")
+      print("\033[01;33m   [\033[01;31m+\033[01;33m] \033[01;32mType :- \033[01;33mmyserver \033[01;32mto start myserver\033[00m\n")
+
+
+def MyServer():
+  try:
+	setu().setup()
+
+  except KeyboardInterrupt:
+	sleep(1)
+	print("\n \007\033[01;31mExiting .........")
+	sleep(1)
+	print(" \033[01;32mG00D By .......... :)\n")
+	sleep(1)
+	print("\007\033[00m")
+	sys.exit()
+MyServer()

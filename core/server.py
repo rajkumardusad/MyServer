@@ -72,7 +72,6 @@ class apache(object):
         os.system("rm -rf /data/data/com.termux/files/usr/var/run/apache2/httpd.pid")
         os.system("apachectl stop")
         sleep(4)
-        MServer()
       else:
         self.apa()
 
@@ -82,7 +81,6 @@ class apache(object):
       if stop=="0":
         os.system("apachectl stop")
         sleep(4)
-        MServer()
       else:
         self.apa()
 
@@ -92,7 +90,6 @@ class apache(object):
       if stop=="0":
         os.system("apache2 stop")
         sleep(4)
-        MServer()
       else:
         self.apa()
 

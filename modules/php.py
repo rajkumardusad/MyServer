@@ -140,6 +140,7 @@ def inphp():
     os.system(pac+" update")
     os.system(pac+" install php -y")
     os.system(pac+" install php5 -y")
+    os.system(pac+" install php5-mysql -y")
 
 def php():
   if os.path.exists(bpath+"php"):

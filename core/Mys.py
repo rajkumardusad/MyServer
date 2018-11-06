@@ -6,46 +6,45 @@
 import sys
 import os
 from time import sleep
-from modules.system import *
-from modules.ux import *
-from modules.logo import *
+from system import *
+from ux import *
+from logo import *
 
 class MySQL(object):
   def chmys(self):
     if os.path.exists(bpath+"mysql"):
-      os.system("python2 ~/.MyServer/modules/.srvr.aex")
       self.mysqls()
     else:
       Mylogo()
       print("\n\n\033[01;31m  Sorry we can't install \033[01;32mMySQL \033[01;31min your "+system+".")
-      sleep(4)
+      sleep(1)
 
   def mysqls(self):
-    Mylogo()
-    usrnm=raw_input("\n\n\033[01;33m Enter your MySQL username :- \033[01;36m")
-    if usrnm=="":
-      print("\n\033[01;31m\007 Error Please enter your \033[01;33mMySQL username\033[01;31m !!\n")
-      self.mysqls()
     os.system("python2 ~/.MyServer/modules/.srvr.aex")
     Mylogo()
-    print("\n\033[01;33mStarting Server ......\033[00m\n")
+    print("\n\033[01;33mStarting MySQL Server ......\033[00m\n")
     if os.path.exists("/usr/lib/sudo"):
       os.system("sudo service mysql start")
-      os.system("sudo mysql -u "+usrnm+" -p")
-      print("\n\033[01;31m unfortunately server stopped\n\033[00m")
     elif system=="ubuntu":
       os.system("sudo systemctl mysql start")
-      os.system("sudo mysql -u "+usrnm+" -p")
-      print("\n\033[01;31m unfortunately server stopped\n\033[00m")
     else:
       os.system("service mysql start")
-      os.system("mysql -u "+usrnm+" -p")
-      print("\n\033[01;31m unfortunately server stopped\n\033[00m")
+    ex()
+
+  def mysqlst(self):
+    os.system("python2 ~/.MyServer/modules/.srvr.aex")
+    Mylogo()
+    print("\n\033[01;33mStopping MySQL Server ......\033[00m\n")
+    if os.path.exists("/usr/lib/sudo"):
+      os.system("sudo service mysql stop")
+    elif system=="ubuntu":
+      os.system("sudo systemctl mysql stop")
+    else:
+      os.system("service mysql stop")
     ex()
 
   def inmys(self):
     if os.path.exists(bpath+"mysql"):
-      os.system("python2 ~/.MyServer/modules/.srvr.aex")
       self.mysqls()
     else:
       Mylogo()
@@ -69,3 +68,11 @@ class MySQL(object):
   
 def Mys():
   MySQL().inmys()
+
+def Myst():
+  MySQL().mysqlst()
+
+if sys.argv[1]=="start":
+  Mys()
+elif sys.argv[1]=="stop":
+  Myst()

@@ -44,6 +44,29 @@ case $1 in
     esac
   ;;
 
+  -db)
+    case $# in
+    2)
+      case $2 in
+      start)
+        python2 ~/.MyServer/core/Mys.py $2
+      ;;
+      stop)
+        python2 ~/.MyServer/core/Mys.py $2
+      ;;
+      *)
+        echo "error : invalid arguments !!"
+        echo "use : myserver --help  for more information"
+      ;;
+      esac
+    ;;
+    *)
+      echo "error : invalid arguments"
+      echo "use : myserver --help  for more information"
+    ;;
+    esac
+  ;;
+
   rm)
     case $2 in
     -t)
@@ -65,6 +88,7 @@ case $1 in
   ;;
 
   --help)
+    echo ""
     echo "Usage: myserver [command]... [arguments]..."
     echo ""
     echo " Commands:"
@@ -73,6 +97,7 @@ case $1 in
     echo " -s -py <hostname> <port> <path>        to start python localhost server."
     echo " -s -apa <hostname> <port> <path>       to start apache localhost server."
     echo " -h <hostname> <localhost_port> <port>  to access localhost server on internet."
+    echo " -db [start/stop]                       to start/stop MySQL database server."
     echo " update                                 update MyServer."
     echo " rm -t                                  uninstall MyServer."
     echo " start                                  start MyServer menu."
@@ -80,6 +105,7 @@ case $1 in
   ;;
 
   help)
+    echo ""
     echo "Usage: myserver [command]... [arguments]..."
     echo ""
     echo " Commands:"
@@ -88,6 +114,7 @@ case $1 in
     echo " -s -py <hostname> <port> <path>        to start python localhost server."
     echo " -s -apa <hostname> <port> <path>       to start apache localhost server."
     echo " -h <hostname> <localhost_port> <port>  to access localhost server on internet."
+    echo " -db [start/stop]                       to start/stop MySQL database server."
     echo " update                                 update MyServer."
     echo " rm -t                                  uninstall MyServer."
     echo " start                                  start MyServer menu."

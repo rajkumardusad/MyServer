@@ -17,6 +17,7 @@ MyServer is your own localhost server. you can setup PHP, Apache and MySQL serve
 - **myserver -s -py <hostname/ip> <localhost_port> <document_root_path>** to start python localhost server.
 - **myserver -s -apa <hostname/ip> <localhost_port> <document_root_path>** to start apache localhost server.
 - **myserver -h <domain_name> <localhost_port> <http_port/https_port>** to access localhost server on internet.
+- **myserver -db [start/stop]** to start/stop mysql database server.
 - **myserver update update** MyServer.
 - **myserver rm -t** uninstall MyServer.
 - **myserver start** start MyServer menu.

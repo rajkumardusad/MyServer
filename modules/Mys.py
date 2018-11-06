@@ -13,7 +13,6 @@ from logo import *
 class MySQL(object):
   def chmys(self):
     if os.path.exists(bpath+"mysql"):
-      os.system("python2 ~/.MyServer/modules/.srvr.aex")
       self.mysqls()
     else:
       Mylogo()
@@ -45,7 +44,6 @@ class MySQL(object):
 
   def inmys(self):
     if os.path.exists(bpath+"mysql"):
-      os.system("python2 ~/.MyServer/modules/.srvr.aex")
       self.mysqls()
     else:
       Mylogo()

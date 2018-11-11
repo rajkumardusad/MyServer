@@ -172,7 +172,7 @@ class nginx(object):
     if os.path.exists(bpath+"nginx"):
       os.system("nginx")
       sleep(2)
-      self.apa()
+      self.ngs()
     elif os.path.exists("/usr/sbin/nginx"):
       os.system("sudo systemctl start nginx")
       os.system("service nginx start")

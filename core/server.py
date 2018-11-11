@@ -72,7 +72,7 @@ class apache(object):
         os.system("rm -rf /data/data/com.termux/files/usr/var/run/apache2/httpd.pid")
         os.system("apachectl stop")
         sleep(2)
-        print("\n\007\033[01;33m Apache web server\033[01;31m stopped !! \033[00m")
+        print("\n\007\033[01;33m  Apache web server\033[01;31m stopped !! \033[00m")
       else:
         self.apa()
 
@@ -82,7 +82,7 @@ class apache(object):
       if stop=="0":
         os.system("apachectl stop")
         sleep(2)
-        print("\n\007\033[01;33m Apache web server\033[01;31m stopped !! \033[00m")
+        print("\n\007\033[01;33m  Apache web server\033[01;31m stopped !! \033[00m")
       else:
         self.apa()
 
@@ -92,7 +92,7 @@ class apache(object):
       if stop=="0":
         os.system("apache2 stop")
         sleep(2)
-        print("\n\007\033[01;33m Apache web server\033[01;31m stopped !! \033[00m")
+        print("\n\007\033[01;33m  Apache web server\033[01;31m stopped !! \033[00m")
       else:
         self.apa()
 
@@ -161,12 +161,12 @@ class nginx(object):
   def ng(self):
     if os.path.exists(bpath+"nginx"):
       os.system("nginx")
-      sleep(2)
+      sleep(1)
       self.ngs()
     elif os.path.exists("/usr/sbin/nginx"):
       os.system("sudo systemctl start nginx")
       os.system("service nginx start")
-      sleep(2)
+      sleep(1)
       self.ngs()
     else:
       Mylogo()
@@ -182,7 +182,7 @@ class nginx(object):
       if stop=="0":
         os.system("nginx -s stop")
         sleep(2)
-        print("\n\007\033[01;33m Nginx web server\033[01;31m stopped !! \033[00m")
+        print("\n\007\033[01;33m  Nginx web server\033[01;31m stopped !! \033[00m")
       else:
         self.ngs()
 
@@ -193,7 +193,7 @@ class nginx(object):
         os.system("sudo systemctl stop nginx")
         os.system("service nginx stop")
         sleep(2)
-        print("\n\007\033[01;33m Nginx web server\033[01;31m stopped !! \033[00m")
+        print("\n\007\033[01;33m  Nginx web server\033[01;31m stopped !! \033[00m")
       else:
         self.ngs()
 

@@ -127,7 +127,7 @@ case $1 in
     echo "Usage: myserver [command]... [arguments]..."
     echo ""
     echo " Commands:"
-    echo " -s -d <hostname> <port> <path>         to start default localhost server."
+    echo " -s <hostname> <port> <path>            to start default localhost server."
     echo " -s -php <hostname> <port> <path>       to start php localhost server."
     echo " -s -py <hostname> <port> <path>        to start python localhost server."
     echo " -h <hostname> <localhost_port> <port>  to access localhost server on internet."

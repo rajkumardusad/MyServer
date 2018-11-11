@@ -34,6 +34,7 @@ def mslogo():
 \033[1;32m   [\033[1;31m 2 \033[1;32m] \033[1;33mStart PHP web server.
 \033[1;32m   [\033[1;31m 3 \033[1;32m] \033[1;33mStart Python web server.
 \033[1;32m   [\033[1;31m 4 \033[1;32m] \033[1;33mStart Apache web server.
+\033[1;32m   [\033[1;31m 5 \033[1;32m] \033[1;33mStart Nginx web server.
 \033[1;32m   [\033[1;31m 0 \033[1;32m] \033[1;33mBack.\n''')
   else:
     sleep(0.2)
@@ -43,6 +44,7 @@ def mslogo():
 \033[1;32m   [\033[1;31m 2 \033[1;32m] \033[1;33mStart PHP web server.
 \033[1;32m   [\033[1;31m 3 \033[1;32m] \033[1;33mStart Python web server.
 \033[1;32m   [\033[1;31m 4 \033[1;32m] \033[1;33mStart Apache web server.
+\033[1;32m   [\033[1;31m 5 \033[1;32m] \033[1;33mStart Nginx web server.
 \033[1;32m   [\033[1;31m 0 \033[1;32m] \033[1;33mBack.\n''')
 
 def mhlogo():

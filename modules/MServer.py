@@ -167,6 +167,46 @@ class apache(object):
       else:
         self.apa()
 
+class nginx(object):
+  def ng(self):
+    if os.path.exists(bpath+"nginx"):
+      os.system("nginx")
+      sleep(2)
+      self.apa()
+    elif os.path.exists("/usr/sbin/nginx"):
+      os.system("sudo systemctl start nginx")
+      os.system("service nginx start")
+      sleep(2)
+      self.ngs()
+    else:
+      Mylogo()
+      print("\n\n\007\033[01;31m  Error \033[01;33mNginx \033[01;31mNot installed.")
+      sleep(2)
+      MServer()
+
+  def ngs(self):
+    os.system("python2 ~/.MyServer/modules/.srvr.aex")
+    Mylogo()
+    if os.path.exists(bpath+"nginx"):
+      print("\n\n \007\033[01;33m Nginx web server\033[01;32m is running .....")
+      stop=raw_input(" \033[01;33m Press \033[01;36m0\033[01;33m to stop server >>\033[01;36m ");
+      if stop=="0":
+        os.system("nginx -s stop")
+        sleep(2)
+        MServer()
+      else:
+        self.ngs()
+    elif os.path.exists("/usr/sbin/nginx"):
+      print("\n\n \007\033[01;33m Nginx web server\033[01;32m is running .....")
+      stop=raw_input(" \033[01;33m Press \033[01;36m0\033[01;33m to stop server >>\033[01;36m ");
+      if stop=="0":
+        os.system("sudo systemctl stop nginx")
+        os.system("service nginx stop")
+        sleep(2)
+        MServer()
+      else:
+        self.ngs()
+
 class Manual(object):
   def MS(self):
     while True:
@@ -196,6 +236,20 @@ class Manual(object):
           os.system(pac+" update")
           os.system(pac+" install apache2 -y")
           apache().asr()
+          break
+      elif Tool == "5":
+        if os.path.exists(bpath+"nginx"):
+          nginx().ng()
+          break
+        elif os.path.exists("/usr/sbin/nginx"):
+          nginx().ng()
+          break
+        else:
+          Mylogo()
+          print("\n\033[01;33minstalling Nginx web server .........\033[00m\n")
+          os.system(pac+" update")
+          os.system(pac+" install nginx -y")
+          nginx().ng()
           break
       elif Tool == "0" or Tool=="back":
         break

@@ -119,15 +119,15 @@ class apache(object):
   def asr(self):
     if os.path.exists(bpath+"apachectl"):
       os.system("apachectl")
-      sleep(4)
+      sleep(0.1)
       self.apa()
     elif os.path.exists("/usr/sbin/apachectl"):
       os.system("apachectl start")
-      sleep(4)
+      sleep(0.1)
       self.apa()
     elif os.path.exists("/usr/sbin/apache2"):
       os.system("apache2 start")
-      sleep(4)
+      sleep(0.1)
       self.apa()
     else:
       Mylogo()
@@ -144,7 +144,7 @@ class apache(object):
       if stop=="0":
         os.system("rm -rf /data/data/com.termux/files/usr/var/run/apache2/httpd.pid")
         os.system("apachectl stop")
-        sleep(4)
+        sleep(1)
         MServer()
       else:
         self.apa()
@@ -153,7 +153,7 @@ class apache(object):
       stop=raw_input(" \033[01;33m Press \033[01;36m0\033[01;33m to stop server >>\033[01;36m ");
       if stop=="0":
         os.system("apachectl stop")
-        sleep(4)
+        sleep(1)
         MServer()
       else:
         self.apa()
@@ -162,7 +162,7 @@ class apache(object):
       stop=raw_input(" \033[01;33m Press \033[01;36m0\033[01;33m to stop server >>\033[01;36m ");
       if stop=="0":
         os.system("apache2 stop")
-        sleep(4)
+        sleep(1)
         MServer()
       else:
         self.apa()
@@ -171,12 +171,12 @@ class nginx(object):
   def ng(self):
     if os.path.exists(bpath+"nginx"):
       os.system("nginx")
-      sleep(2)
+      sleep(0.1)
       self.ngs()
     elif os.path.exists("/usr/sbin/nginx"):
       os.system("sudo systemctl start nginx")
       os.system("service nginx start")
-      sleep(2)
+      sleep(0.1)
       self.ngs()
     else:
       Mylogo()

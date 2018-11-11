@@ -11,12 +11,18 @@ from ux import *
 from logo import *
 
 if sys.argv[1]=="-s":
-  s=open(spath+".serv.lock","r")
-  sr=s.read()
-  s.close()
-  os.system("python2 ~/.MyServer/core/server.py "+sr)
+  if os.path.exists(spath+".serv.lock"):
+    s=open(spath+".serv.lock","r")
+    sr=s.read()
+    s.close()
+    os.system("python2 ~/.MyServer/core/server.py "+sr)
+  else:
+    pass
 elif sys.argv[1]=="-h":
-  s=open(spath+".h.lock","r")
-  sr=s.read()
-  s.close()
-  os.system("python2 ~/.MyServer/core/host.py "+sr)
+  if os.path.exists(spath+".h.lock"):
+    s=open(spath+".h.lock","r")
+    sr=s.read()
+    s.close()
+    os.system("python2 ~/.MyServer/core/host.py "+sr)
+  else:
+    pass

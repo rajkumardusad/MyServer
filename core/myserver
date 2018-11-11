@@ -5,6 +5,23 @@
 case $1 in
   -s)
     case $# in
+      1)
+        python2 ~/.MyServer/core/s.py $1
+      ;;
+      2)
+        case $2 in
+          apache)
+            python2 ~/.MyServer/core/server.py -apa
+          ;;
+          nginx)
+            python2 ~/.MyServer/core/server.py -ng
+          ;;
+          *)
+            echo "error : invalid arguments !!"
+            echo "use : myserver --help  for more information"
+          ;;
+          esac
+      ;;
     5)
       case $2 in
       -php)
@@ -12,9 +29,6 @@ case $1 in
       ;;
       -py)
         python2 ~/.MyServer/core/server.py -py $3 $4 $5
-      ;;
-      -apa)
-        python2 ~/.MyServer/core/server.py -apa
       ;;
       *)
         echo "error : invalid arguments !!"
@@ -34,6 +48,9 @@ case $1 in
 
   -h)
     case $# in
+    1)
+      python2 ~/.MyServer/core/s.py $1
+    ;;
     4)
       python2 ~/.MyServer/core/host.py $2 $3 $4
     ;;

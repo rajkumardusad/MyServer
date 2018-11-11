@@ -20,6 +20,9 @@ class lt(object):
     while True:
       dn = sys.argv[1]
       port = sys.argv[3]
+      h=open(spath+".h.lock","w")
+      h.write(sys.argv[1]+" "+sys.argv[2]+" "+sys.argv[3])
+      h.close()
       os.system("python2 ~/.MyServer/modules/.srvr.aex")
       Mylogo()
       print("\n\033[01;33mStarting Up Server ......\033[00m\n")
@@ -95,6 +98,9 @@ class openssh(object):
         dn = sys.argv[1]
         portl = sys.argv[2]
         port = sys.argv[3]
+        h=open(spath+".h.lock","w")
+        h.write(sys.argv[1]+" "+sys.argv[2]+" "+sys.argv[3])
+        h.close()
         os.system("python2 ~/.MyServer/modules/.srvr.aex")
         Mylogo()
         print("\n\033[01;33mStarting Server ......\033[00m\n")

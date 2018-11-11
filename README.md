@@ -21,6 +21,8 @@ MyServer is your own localhost server. you can setup PHP, Apache and MySQL serve
 - **myserver update update** MyServer.
 - **myserver rm -t** uninstall MyServer.
 - **myserver start** start MyServer menu.
+- **myserver -s** to start Server that were previously running.
+- **myserver -h** to access from web that was previously accessed.
   
 **menual Use :**
 - Type 1 : to start your localhost web server.
@@ -37,24 +39,19 @@ MyServer is your own localhost server. you can setup PHP, Apache and MySQL serve
 
 ## Support :
 
-* Apache2 server.
-* PHP server.
-* Python web server.
-* MySQL Database server.
+* **Apache2 server.**
+* **nginx server.**
+* **PHP server.**
+* **Python web server.**
+* **MySQL Database server.**
 
 <br/>
 
 ## MyServer is available for :
 
-* Android
-* Ubuntu
-
-<br/>
-
-**Warning :**
-
-***I am not expert so use this tool at your own risk.***
-
+* **Android**
+* **Ubuntu**
+* **Linux**
 <br/>
 
 # How to Install MyServer ?
@@ -78,3 +75,10 @@ Open the termux app and type following commands.
 ## Now MyServer is installed successfully.
 
 **Now type `myserver start` to start MyServer.**
+
+<br>
+
+**Warning :** ***I am not expert so use this tool at your own risk.***
+
+<br/>
+

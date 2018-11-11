@@ -16,7 +16,7 @@ class MySQL(object):
       self.mysqls()
     else:
       Mylogo()
-      print("\n\n\033[01;31m  Sorry we can't install \033[01;32mMySQL \033[01;31min your "+system+".")
+      print("\n\n\033[01;31m  Sorry we can't install \033[01;32mMySQL \033[01;31min your "+system+".\033[00m")
       sleep(1)
 
   def mysqls(self):

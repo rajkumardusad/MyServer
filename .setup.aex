@@ -15,17 +15,17 @@ class setu(object):
     if os.path.exists(bpath+"myserver"):
       if system=="ubuntu":
         os.system("sudo rm -rf ~/.MyServer && rm -rf "+bpath+"myserver")
-        os.system("cd "+spath+" && sudo rm -rf .path.aex .port.aex .host.aex")
+        os.system("cd "+spath+" && sudo rm -rf .path.aex .port.aex .host.aex .serv.lock .h.lock")
       else:
         os.system("rm -rf ~/.MyServer && rm -rf "+bpath+"myserver")
-        os.system("cd "+spath+" && rm -rf .path.aex .port.aex .host.aex")
+        os.system("cd "+spath+" && rm -rf .path.aex .port.aex .host.aex .serv.lock .h.lock")
     else:
       if system=="ubuntu":
         os.system("sudo rm -rf ~/.MyServer && rm -rf "+bpath+"myserver")
-        os.system("cd "+spath+" && sudo rm -rf .path.aex .port.aex .host.aex")
+        os.system("cd "+spath+" && sudo rm -rf .path.aex .port.aex .host.aex .serv.lock .h.lock")
       else:
         os.system("rm -rf ~/.MyServer && rm -rf "+bpath+"myserver")
-        os.system("cd "+spath+" && rm -rf .path.aex .port.aex .host.aex")
+        os.system("cd "+spath+" && rm -rf .path.aex .port.aex .host.aex .serv.lock .h.lock")
 
   def setup(self):
     self.rem()
@@ -40,7 +40,9 @@ class setu(object):
       os.system("cd .. && sudo rm -rf MyServer")
       os.system("sudo rm -rf ~/MyServer")
       os.system("sudo rm -rf "+home+"MyServer")
+      sleep(0.5)
       Mylogo()
+      sleep(1)
       print("\n\033[01;33m\007   [\033[01;31m+\033[01;33m] \033[01;32mInstalled MyServer.")
       print("\033[01;33m   [\033[01;31m+\033[01;33m] \033[01;32mType :- \033[01;33mmyserver start \033[01;32mto start myserver\033[00m\n")
 
@@ -54,7 +56,9 @@ class setu(object):
       os.system("chmod +x ~/.MyServer/MyServer.py")
       os.system("rm -rf ~/MyServer")
       os.system("cd .. && rm -rf MyServer")
+      sleep(0.5)
       Mylogo()
+      sleep(1)
       print("\n\033[01;33m\007   [\033[01;31m+\033[01;33m] \033[01;32mInstalled MyServer.")
       print("\033[01;33m   [\033[01;31m+\033[01;33m] \033[01;32mType :- \033[01;33mmyserver start \033[01;32mto start myserver\033[00m\n")
 
@@ -68,7 +72,9 @@ class setu(object):
       os.system("chmod +x ~/.MyServer/MyServer.py")
       os.system("rm -rf "+home+"MyServer")
       os.system("cd .. && rm -rf MyServer")
+      sleep(0.5)
       Mylogo()
+      sleep(1)
       print("\n\033[01;33m\007   [\033[01;31m+\033[01;33m] \033[01;32mInstalled MyServer.")
       print("\033[01;33m   [\033[01;31m+\033[01;33m] \033[01;32mType :- \033[01;33mmyserver start \033[01;32mto start myserver\033[00m\n")
 

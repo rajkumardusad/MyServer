@@ -76,7 +76,8 @@ Open the termux app and type following commands.
 ## Now MyServer is installed successfully.
 
 **Now type `myserver start` to start MyServer.**
-**type `myserver --help` for more information.***
+
+**type `myserver --help` for more information.**
 
 <br>
 

@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # Tool Name :- MyServer
 # Author :- Rajkumar Dusad
 # Date :- 23/5/2018
@@ -6,15 +7,15 @@ case $1 in
   -s)
     case $# in
       1)
-        python2 ~/.MyServer/core/s.py $1
+        python2 core/s.py $1
       ;;
       2)
         case $2 in
           apache)
-            python2 ~/.MyServer/core/server.py -apa
+            python2 core/server.py -apa
           ;;
           nginx)
-            python2 ~/.MyServer/core/server.py -ng
+            python2 core/server.py -ng
           ;;
           *)
             echo "error : invalid arguments !!"
@@ -25,10 +26,10 @@ case $1 in
     5)
       case $2 in
       -php)
-        python2 ~/.MyServer/core/server.py -php $3 $4 $5
+        python2 core/server.py -php $3 $4 $5
       ;;
       -py)
-        python2 ~/.MyServer/core/server.py -py $3 $4 $5
+        python2 core/server.py -py $3 $4 $5
       ;;
       *)
         echo "error : invalid arguments !!"
@@ -37,7 +38,7 @@ case $1 in
       esac
     ;;
     4)
-      python2 ~/.MyServer/core/server.py -d $2 $3 $4
+      python2 core/server.py -d $2 $3 $4
     ;;
     *)
       echo "error : invalid arguments !!"
@@ -49,10 +50,10 @@ case $1 in
   -h)
     case $# in
     1)
-      python2 ~/.MyServer/core/s.py $1
+      python2 core/s.py $1
     ;;
     4)
-      python2 ~/.MyServer/core/host.py $2 $3 $4
+      python2 core/host.py $2 $3 $4
     ;;
     *)
       echo "error : invalid arguments"
@@ -66,10 +67,10 @@ case $1 in
     2)
       case $2 in
       start)
-        python2 ~/.MyServer/core/Mys.py $2
+        python2 core/Mys.py $2
       ;;
       stop)
-        python2 ~/.MyServer/core/Mys.py $2
+        python2 core/Mys.py $2
       ;;
       *)
         echo "error : invalid arguments !!"
@@ -87,7 +88,7 @@ case $1 in
   rm)
     case $2 in
     -t)
-      python2 ~/.MyServer/core/un.py
+      python2 core/un.py
     ;;
     *)
       echo "error : invalid arguments"
@@ -97,11 +98,11 @@ case $1 in
   ;;
 
   update)
-    python2 ~/.MyServer/core/upd.py
+    python2 core/upd.py
   ;;
 
   start)
-    python2 ~/.MyServer/MyServer.py
+    python2 MyServer.py
   ;;
 
   --help)

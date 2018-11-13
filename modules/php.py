@@ -36,7 +36,7 @@ class phpserver(object):
         getp="8080"
       if host=="":
         host="localhost"
-      os.system("python2 ~/.MyServer/modules/.srvr.aex")
+      os.system("python2 modules/.srvr.aex")
       Mylogo()
       print("\n\033[01;33mStarting Server ......\033[00m\n")
       if os.path.exists(getpat+"/index.html"):
@@ -49,15 +49,15 @@ class phpserver(object):
         pass
       else:
         if system=="termux":
-          os.system("cp "+home+".MyServer/modules/index.sh "+getpat)
+          os.system("cp modules/index.sh "+getpat)
           os.system("cd "+getpat+" && sh index.sh")
           os.system("cd "+getpat+" && rm index.sh")
         elif system=="ubuntu":
-          os.system("sudo cp "+home+".MyServer/modules/index.sh "+getpat)
+          os.system("sudo cp modules/index.sh "+getpat)
           os.system("cd "+getpat+" && sudo sh index.sh")
           os.system("cd "+getpat+" && sudo rm index.sh")
         else:
-          os.system("cp "+home+".MyServer/modules/index.sh "+getpat)
+          os.system("cp modules/index.sh "+getpat)
           os.system("cd "+getpat+" && sh index.sh")
           os.system("cd "+getpat+" && rm index.sh")
       os.system("php -S "+host+":"+getp+" -t "+getpat)
@@ -104,7 +104,7 @@ class phpserver(object):
       shost=open(spath+".host.aex","w")
       shost.write(hostn)
       shost.close()
-    os.system("python2 ~/.MyServer/modules/.srvr.aex")
+    os.system("python2 modules/.srvr.aex")
     Mylogo()
     print("\n\033[01;33mStarting Server ......\033[00m\n")
     if os.path.exists(pat+"/index.html"):
@@ -117,15 +117,15 @@ class phpserver(object):
       pass
     else:
       if system=="termux":
-        os.system("cp "+home+".MyServer/modules/index.sh "+pat)
+        os.system("cp modules/index.sh "+pat)
         os.system("cd "+pat+" && sh index.sh")
         os.system("cd "+pat+" && rm index.sh")
       elif system=="ubuntu":
-        os.system("sudo cp "+home+".MyServer/modules/index.sh "+pat)
+        os.system("sudo cp modules/index.sh "+pat)
         os.system("cd "+pat+" && sudo sh index.sh")
         os.system("cd "+pat+" && sudo rm index.sh")
       else:
-        os.system("cp "+home+".MyServer/modules/index.sh "+pat)
+        os.system("cp modules/index.sh "+pat)
         os.system("cd "+pat+" && sh index.sh")
         os.system("cd "+pat+" && rm index.sh")
     os.system("php -S "+hostn+":"+port+" -t "+pat)

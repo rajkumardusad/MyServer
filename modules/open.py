@@ -19,12 +19,12 @@ class openssh(object):
   def opens(self):
     while True:
       if os.path.exists(bpath+"ssh"):
-        os.system("python2 ~/.MyServer/modules/.srvr.aex")
+        os.system("python2 modules/.srvr.aex")
         Mylogo()
         dn = raw_input('''\n\n\033[1;33m  Enter your subdomain name (\033[01;32mex Myweb\033[01;33m) :- \033[01;36m''')
         portl = raw_input('''\033[1;33m  Enter your localhost port (\033[01;32mex 8080\033[01;33m) :- \033[01;36m''')
         port = raw_input('''\033[1;33m  Enter your port (\033[01;32mex 80\033[01;33m) :- \033[01;36m''')
-        os.system("python2 ~/.MyServer/modules/.srvr.aex")
+        os.system("python2 modules/.srvr.aex")
         Mylogo()
         print("\n\033[01;33mStarting Server ......\033[00m\n")
         os.system("ssh -R "+port+":localhost:"+portl+" "+dn+"@localhost.run")

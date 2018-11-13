@@ -13,7 +13,7 @@ from php import *
 
 class pyweb(object):
   def chkpy(self):
-    os.system("python2 ~/.MyServer/modules/.srvr.aex")
+    os.system("python2 modules/.srvr.aex")
     if os.path.exists(spath+".path.aex"):
       g=open(spath+".path.aex","r")
       gp=g.read()
@@ -35,15 +35,15 @@ class pyweb(object):
         pass
       else:
         if system=="termux":
-          os.system("cp "+home+".MyServer/modules/index.sh "+gp)
+          os.system("cp modules/index.sh "+gp)
           os.system("cd "+gp+" && sh index.sh")
           os.system("cd "+gp+" && rm index.sh")
         elif system=="ubuntu":
-          os.system("sudo cp "+home+".MyServer/modules/index.sh "+gp)
+          os.system("sudo cp modules/index.sh "+gp)
           os.system("cd "+gp+" && sudo sh index.sh")
           os.system("cd "+gp+" && sudo rm index.sh")
         else:
-          os.system("cp "+home+".MyServer/modules/index.sh "+gp)
+          os.system("cp modules/index.sh "+gp)
           os.system("cd "+gp+" && sh index.sh")
           os.system("cd "+gp+" && rm index.sh")
       Mylogo()
@@ -86,7 +86,7 @@ class pyweb(object):
       shost=open(spath+".host.aex","w")
       shost.write("localhost")
       shost.close()
-    os.system("python2 ~/.MyServer/modules/.srvr.aex")
+    os.system("python2 modules/.srvr.aex")
     Mylogo()
     print("\n\033[01;33mStarting Server ......\033[00m\n")
     if os.path.exists(gp+"/index.html"):
@@ -99,15 +99,15 @@ class pyweb(object):
       pass
     else:
       if system=="termux":
-        os.system("cp "+home+".MyServer/modules/index.sh "+gp)
+        os.system("cp modules/index.sh "+gp)
         os.system("cd "+gp+" && sh index.sh")
         os.system("cd "+gp+" && rm index.sh")
       elif system=="ubuntu":
-        os.system("sudo cp "+home+".MyServer/modules/index.sh "+gp)
+        os.system("sudo cp modules/index.sh "+gp)
         os.system("cd "+gp+" && sudo sh index.sh")
         os.system("cd "+gp+" && sudo rm index.sh")
       else:
-        os.system("cp "+home+".MyServer/modules/index.sh "+gp)
+        os.system("cp modules/index.sh "+gp)
         os.system("cd "+gp+" && sh index.sh")
         os.system("cd "+gp+" && rm index.sh")
     print("\033[01;33mYour Server URL is :- \033[01;36mhttp://localhost:"+port+"/ \n http://127.0.0.1:"+port+"/\033[00m\n")
@@ -136,7 +136,7 @@ class apache(object):
       MServer()
 
   def apa(self):
-    os.system("python2 ~/.MyServer/modules/.srvr.aex")
+    os.system("python2 modules/.srvr.aex")
     Mylogo()
     if os.path.exists(bpath+"apachectl"):
       print("\n\n \007\033[01;33m Apache web server\033[01;32m is running .....")
@@ -185,7 +185,7 @@ class nginx(object):
       MServer()
 
   def ngs(self):
-    os.system("python2 ~/.MyServer/modules/.srvr.aex")
+    os.system("python2 modules/.srvr.aex")
     Mylogo()
     if os.path.exists(bpath+"nginx"):
       print("\n\n \007\033[01;33m Nginx web server\033[01;32m is running .....")

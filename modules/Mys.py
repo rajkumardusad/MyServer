@@ -25,7 +25,7 @@ class MySQL(object):
     if usrnm=="":
       print("\n\033[01;31m\007 Error Please enter your \033[01;33mMySQL username\033[01;31m !!\n")
       self.mysqls()
-    os.system("python2 ~/.MyServer/modules/.srvr.aex")
+    os.system("python2 modules/.srvr.aex")
     Mylogo()
     print("\n\033[01;33mStarting Server ......\033[00m\n")
     if os.path.exists("/usr/lib/sudo"):

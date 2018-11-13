@@ -19,7 +19,7 @@ class ngrok(object):
       self.chsng()
     else:
       print("\n\n\033[01;32mInstalling ngrok ....\n")
-      os.system("sh ~/.MyServer/modules/LiNgrok.sh")
+      os.system("sh modules/LiNgrok.sh")
       self.chsng()
 
   def chsng(self):
@@ -34,7 +34,7 @@ class ngrok(object):
       Mhost()
 
   def token(self):
-    os.system("python2 ~/.MyServer/modules/.srvr.aex")
+    os.system("python2 modules/.srvr.aex")
     Mylogo()
     auth=raw_input("\n\n\033[01;33m You have ngrok authtoken [Y/n] :- \033[01;36m")
     if auth=="y" or auth=="Y":

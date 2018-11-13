@@ -1,84 +1,146 @@
 # Tool Name :- MyServer
 # Author :- Rajkumar Dusad
-# Date :- 22/5/2018
+# Date :- 13/11/2018
 # Powered By :- Aex Software's
 
 import sys
 import os
 from time import sleep
 from modules.system import *
-from modules.ux import *
-from modules.load import load
-from modules.menu import menu
-from modules.logo import notin
 
-class oschek(object):
-  def ch_os(self):
-	if "linux" in sys.platform:
-       # Running MyServer on linux ...
-	   pass
-	elif "darwin" in sys.platform:
-	   print("Sorry, MyServer is not available for windows right now...")
-	   exit()
-	elif "win" in sys.platform:
-	   print("Sorry, MyServer is not available for windows right now...")
-	   exit()
-	else:
-	   print("MyServer is not available for \'%s\' right now !!!" %sys.platform)
-	   exit()
+if len(sys.argv)>1:
+  pass
+else:
+  print "error : invalid arguments !!"
+  print "use : myserver --help  for more information"
+  sys.exit()
 
-class inschek(object):
-  def ch_ins(self):
-    if system=="termux":
-      if os.path.exists(bpath+"myserver"):
-        pass
+if sys.argv[1]=="-s":
+
+  if len(sys.argv)==2:
+    if system=="ubuntu":
+      os.system("sudo python2 core/s.py "+sys.argv[1])
+    else:
+      os.system("python2 core/s.py "+sys.argv[1])
+
+  elif len(sys.argv)==3:
+    if sys.argv[2]=="apache":
+      if system=="ubuntu":
+        os.system("sudo python2 core/server.py -apa")
       else:
-        notin()
-        opt=raw_input("\033[01;33m Do you want to install MyServer [\033[01;32mY/n\033[01;33m] >> \033[00m")
-        if opt=="Y" or opt=="y":
-          os.system("sh install")
-        elif opt=="N" or opt=="n":
-          exit()
-        else:
-          print("\n \033[01;31m\007Command not found :\033[01;32m \'"+opt+"\'")
-          sleep(1)
-          self.ch_ins()
-    elif system=="ubuntu":
-      if os.path.exists(bpath+"myserver"):
-        pass
+        os.system("python2 core/server.py -apa")
+    elif sys.argv[2]=="nginx":
+      if system=="ubuntu":
+        os.system("sudo python2 core/server.py -ng")
       else:
-        notin()
-        opt=raw_input("\033[01;33m Do you want to install MyServer [\033[01;32mY/n\033[01;33m] >> \033[00m")
-        if opt=="Y" or opt=="y":
-          os.system("sh install")
-        elif opt=="N" or opt=="n":
-          exit()
-        else:
-          print("\n \033[01;31m\007Command not found :\033[01;32m \'"+opt+"\'")
-          sleep(1)
-          self.ch_ins()
-    elif system=="debian":
-      if os.path.exists(bpath+"myserver"):
-        pass
+        os.system("python2 core/server.py -ng")
+    else:
+      print "error : invalid arguments !!"
+      print "use : myserver --help  for more information"
+
+  elif len(sys.argv)==6:
+    if sys.argv[2]=="-php":
+      if system=="ubuntu":
+        os.system("sudo python2 core/server.py -php "+sys.argv[3]+" "+sys.argv[4]+" "+sys.argv[5])
       else:
-        notin()
-        opt=raw_input("\033[01;33m Do you want to install MyServer [\033[01;32mY/n\033[01;33m] >> \033[00m")
-        if opt=="Y" or opt=="y":
-          os.system("sh install")
-        elif opt=="N" or opt=="n":
-          exit()
-        else:
-          print("\n \033[01;31m\007Command not found :\033[01;32m \'"+opt+"\'")
-          sleep(1)
-          self.ch_ins()
+        os.system("python2 core/server.py -php "+sys.argv[3]+" "+sys.argv[4]+" "+sys.argv[5])
+    elif sys.argv[2]=="-py":
+      if system=="ubuntu":
+        os.system("sudo python2 core/server.py -py "+sys.argv[3]+" "+sys.argv[4]+" "+sys.argv[5])
+      else:
+        os.system("python2 core/server.py -py "+sys.argv[3]+" "+sys.argv[4]+" "+sys.argv[5])
+    else:
+      print "error : invalid arguments !!"
+      print "use : myserver --help  for more information"
 
-def MyServer():
-  try:
-	load()
-	oschek().ch_os()
-	inschek().ch_ins()
-	menu()
+  elif len(sys.argv)==5:
+    if system=="ubuntu":
+      os.system("sudo python2 core/server.py -d "+sys.argv[2]+" "+sys.argv[3]+" "+sys.argv[4])
+    else:
+      os.system("python2 core/server.py -d "+sys.argv[2]+" "+sys.argv[3]+" "+sys.argv[4])
+  else:
+    print "error : invalid arguments !!"
+    print "use : myserver --help  for more information"
 
-  except KeyboardInterrupt:
-	exit()
-MyServer()
+elif sys.argv[1]=="-h":
+  if len(sys.argv)==2:
+    if system=="ubuntu":
+      os.system("sudo python2 core/s.py "+sys.argv[1])
+    else:
+      os.system("python2 core/s.py "+sys.argv[1])
+
+  elif len(sys.argv)==5:
+    if system=="ubuntu":
+      os.system("sudo python2 core/host.py "+sys.argv[2]+" "+sys.argv[3]+" "+sys.argv[4])
+    else:
+      os.system("python2 core/host.py "+sys.argv[2]+" "+sys.argv[3]+" "+sys.argv[4])
+
+  else:
+    print "error : invalid arguments"
+    print "use : myserver --help  for more information"
+
+elif sys.argv[1]=="-db":
+  if len(sys.argv)==3:
+    if sys.argv[2]=="start":
+      if system=="ubuntu":
+        os.system("sudo python2 core/Mys.py "+sys.argv[2])
+      else:
+        os.system("python2 core/Mys.py "+sys.argv[2])
+    elif sys.argv[2]=="stop":
+      if system=="ubuntu":
+        os.system("sudo python2 core/Mys.py "+sys.argv[2])
+      else:
+        os.system("python2 core/Mys.py "+sys.argv[2])
+    else:
+      print "error : invalid arguments !!"
+      print "use : myserver --help  for more information"
+  else:
+    print "error : invalid arguments !!"
+    print "use : myserver --help  for more information"
+
+elif sys.argv[1]=="rm":
+  if len(sys.argv)==3:
+    if sys.argv[2]=="-T" or sys.argv[2]=="-t":
+      if system=="ubuntu":
+        os.system("sudo python2 core/un.py")
+      else:
+        os.system("python2 core/un.py")
+    else:
+      print "error : invalid arguments"
+      print "use : myserver --help  for more information"
+  else:
+    print "error : invalid arguments"
+    print "use : myserver --help  for more information"
+
+elif sys.argv[1]=="update":
+  if system=="ubuntu":
+    os.system("sudo python2 /core/upd.py")
+  else:
+    os.system("python2 /core/upd.py")
+
+elif sys.argv[1]=="start":
+  if system=="ubuntu":
+    os.system("sudo python2 .MyServer.py")
+  else:
+     os.system("python2 .MyServer.py")
+
+elif sys.argv[1]=="--help" or sys.argv[1]=="help":
+  print ""
+  print "Usage: myserver [command]... [arguments]..."
+  print ""
+  print " Commands:"
+  print " -s <hostname> <port> <path>            to start default localhost server."
+  print " -s -php <hostname> <port> <path>       to start php localhost server."
+  print " -s -py <hostname> <port> <path>        to start python localhost server."
+  print " -h <hostname> <localhost_port> <port>  to access localhost server on internet."
+  print " -db [start/stop]                       to start/stop MySQL database server."
+  print " -s apache                              to start apache web server."
+  print " -s nginx                               to start nginx web server."
+  print " update                                 update MyServer."
+  print " rm -t                                  uninstall MyServer."
+  print " start                                  start MyServer menu."
+  print ""
+
+else:
+  print "error : invalid arguments !!"
+  print "use : myserver --help  for more information"

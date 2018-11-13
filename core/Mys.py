@@ -20,7 +20,7 @@ class MySQL(object):
       sleep(1)
 
   def mysqls(self):
-    os.system("python2 ~/.MyServer/modules/.srvr.aex")
+    os.system("python2 modules/.srvr.aex")
     Mylogo()
     print("\n\033[01;33mStarting MySQL Server ......\033[00m\n")
     if os.path.exists("/usr/lib/sudo"):
@@ -32,7 +32,7 @@ class MySQL(object):
     ex()
 
   def mysqlst(self):
-    os.system("python2 ~/.MyServer/modules/.srvr.aex")
+    os.system("python2 modules/.srvr.aex")
     Mylogo()
     print("\n\033[01;33mStopping MySQL Server ......\033[00m\n")
     if os.path.exists("/usr/lib/sudo"):

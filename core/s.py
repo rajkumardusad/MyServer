@@ -15,7 +15,10 @@ if sys.argv[1]=="-s":
     s=open(spath+".serv.lock","r")
     sr=s.read()
     s.close()
-    os.system("python2 ~/.MyServer/core/server.py "+sr)
+    if system=="ubuntu":
+      os.system("sudo python2 core/server.py "+sr)
+    else:
+      os.system("python2 core/server.py "+sr)
   else:
     pass
 elif sys.argv[1]=="-h":
@@ -23,6 +26,9 @@ elif sys.argv[1]=="-h":
     s=open(spath+".h.lock","r")
     sr=s.read()
     s.close()
-    os.system("python2 ~/.MyServer/core/host.py "+sr)
+    if system=="ubuntu":
+      os.system("sudo python2 core/host.py "+sr)
+    else:
+      os.system("python2 core/host.py "+sr)
   else:
     pass

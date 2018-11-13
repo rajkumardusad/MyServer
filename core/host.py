@@ -23,7 +23,7 @@ class lt(object):
       h=open(spath+".h.lock","w")
       h.write(sys.argv[1]+" "+sys.argv[2]+" "+sys.argv[3])
       h.close()
-      os.system("python2 ~/.MyServer/modules/.srvr.aex")
+      os.system("python2 modules/.srvr.aex")
       Mylogo()
       print("\n\033[01;33mStarting Up Server ......\033[00m\n")
       if os.path.exists(bpath+"lt"):
@@ -101,7 +101,7 @@ class openssh(object):
         h=open(spath+".h.lock","w")
         h.write(sys.argv[1]+" "+sys.argv[2]+" "+sys.argv[3])
         h.close()
-        os.system("python2 ~/.MyServer/modules/.srvr.aex")
+        os.system("python2 modules/.srvr.aex")
         Mylogo()
         print("\n\033[01;33mStarting Server ......\033[00m\n")
         os.system("ssh -R "+port+":localhost:"+portl+" "+dn+"@localhost.run")

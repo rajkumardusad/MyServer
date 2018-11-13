@@ -18,12 +18,12 @@ class Un(object):
 		if ask == "n" or ask == "N":
 			break
 		elif ask == "Y" or ask == "y":
-			os.system("rm -rf "+bpath+"myserver && rm -rf ~/.MyServer")
-			os.system("cd ~/ && rm -rf MyServer")
+			os.system("rm -rf "+bpath+"myserver")
+			os.system("cd "+spath+" && rm -rf MyServer")
 			os.system("cd "+spath+" && rm -rf .host.aex .port.aex .path.aex .serv.lock .h.lock")
 			if system=="ubuntu":
-			  os.system("cd ~/ && sudo rm -rf MyServer")
-			  os.system("sudo rm -rf /usr/bin/myserver && sudo rm -rf ~/.MyServer")
+			  os.system("cd "+spath+" && sudo rm -rf MyServer")
+			  os.system("sudo rm -rf /usr/bin/myserver")
 			  os.system("cd "+spath+" && sudo rm -rf .host.aex .port.aex .path.aex .serv.lock .h.lock")
 			exit()
 		else:

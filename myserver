@@ -1,0 +1,146 @@
+# Tool Name :- MyServer
+# Author :- Rajkumar Dusad
+# Date :- 23/5/2018
+# Powered By :- Aex Software's
+case $1 in
+  -s)
+    case $# in
+      1)
+        python2 ~/.MyServer/core/s.py $1
+      ;;
+      2)
+        case $2 in
+          apache)
+            python2 ~/.MyServer/core/server.py -apa
+          ;;
+          nginx)
+            python2 ~/.MyServer/core/server.py -ng
+          ;;
+          *)
+            echo "error : invalid arguments !!"
+            echo "use : myserver --help  for more information"
+          ;;
+          esac
+      ;;
+    5)
+      case $2 in
+      -php)
+        python2 ~/.MyServer/core/server.py -php $3 $4 $5
+      ;;
+      -py)
+        python2 ~/.MyServer/core/server.py -py $3 $4 $5
+      ;;
+      *)
+        echo "error : invalid arguments !!"
+        echo "use : myserver --help  for more information"
+      ;;
+      esac
+    ;;
+    4)
+      python2 ~/.MyServer/core/server.py -d $2 $3 $4
+    ;;
+    *)
+      echo "error : invalid arguments !!"
+      echo "use : myserver --help  for more information"
+    ;;
+    esac
+  ;;
+
+  -h)
+    case $# in
+    1)
+      python2 ~/.MyServer/core/s.py $1
+    ;;
+    4)
+      python2 ~/.MyServer/core/host.py $2 $3 $4
+    ;;
+    *)
+      echo "error : invalid arguments"
+      echo "use : myserver --help  for more information"
+    ;;
+    esac
+  ;;
+
+  -db)
+    case $# in
+    2)
+      case $2 in
+      start)
+        python2 ~/.MyServer/core/Mys.py $2
+      ;;
+      stop)
+        python2 ~/.MyServer/core/Mys.py $2
+      ;;
+      *)
+        echo "error : invalid arguments !!"
+        echo "use : myserver --help  for more information"
+      ;;
+      esac
+    ;;
+    *)
+      echo "error : invalid arguments"
+      echo "use : myserver --help  for more information"
+    ;;
+    esac
+  ;;
+
+  rm)
+    case $2 in
+    -t)
+      python2 ~/.MyServer/core/un.py
+    ;;
+    *)
+      echo "error : invalid arguments"
+      echo "use : myserver --help  for more information"
+    ;;
+    esac
+  ;;
+
+  update)
+    python2 ~/.MyServer/core/upd.py
+  ;;
+
+  start)
+    python2 ~/.MyServer/MyServer.py
+  ;;
+
+  --help)
+    echo ""
+    echo "Usage: myserver [command]... [arguments]..."
+    echo ""
+    echo " Commands:"
+    echo " -s <hostname> <port> <path>            to start default localhost server."
+    echo " -s -php <hostname> <port> <path>       to start php localhost server."
+    echo " -s -py <hostname> <port> <path>        to start python localhost server."
+    echo " -h <hostname> <localhost_port> <port>  to access localhost server on internet."
+    echo " -db [start/stop]                       to start/stop MySQL database server."
+    echo " -s apache                              to start apache web server."
+    echo " -s nginx                               to start nginx web server."
+    echo " update                                 update MyServer."
+    echo " rm -t                                  uninstall MyServer."
+    echo " start                                  start MyServer menu."
+    echo ""
+  ;;
+
+  help)
+    echo ""
+    echo "Usage: myserver [command]... [arguments]..."
+    echo ""
+    echo " Commands:"
+    echo " -s <hostname> <port> <path>            to start default localhost server."
+    echo " -s -php <hostname> <port> <path>       to start php localhost server."
+    echo " -s -py <hostname> <port> <path>        to start python localhost server."
+    echo " -h <hostname> <localhost_port> <port>  to access localhost server on internet."
+    echo " -db [start/stop]                       to start/stop MySQL database server."
+    echo " -s apache                              to start apache web server."
+    echo " -s nginx                               to start nginx web server."
+    echo " update                                 update MyServer."
+    echo " rm -t                                  uninstall MyServer."
+    echo " start                                  start MyServer menu."
+    echo ""
+  ;;
+  *)
+    echo "error : invalid arguments !!"
+    echo "use : myserver --help  for more information"
+  ;;
+esac

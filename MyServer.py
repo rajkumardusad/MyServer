@@ -114,9 +114,9 @@ elif sys.argv[1]=="rm":
 
 elif sys.argv[1]=="update":
   if system=="ubuntu":
-    os.system("sudo python2 /core/upd.py")
+    os.system("sudo python2 core/upd.py")
   else:
-    os.system("python2 /core/upd.py")
+    os.system("python2 core/upd.py")
 
 elif sys.argv[1]=="start":
   if system=="ubuntu":

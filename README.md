@@ -13,7 +13,7 @@ MyServer is your own localhost server. you can setup PHP, Apache and MySQL serve
 
 **CLI Use :**
 
-  **Example : `myserver -s -ng localhost 8080 /home/www`***
+  ***Example : `myserver -s -ng localhost 8080 /home/www`***
 - **myserver -s <hostname/ip> <localhost_port> <document_root_path>** to start default localhost server.
 - **myserver -s -ng <hostname/ip> <localhost_port> <document_root_path>** to start Nginx web server.
 - **myserver -s -php <hostname/ip> <localhost_port> <document_root_path>** to start php localhost server.

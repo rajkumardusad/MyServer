@@ -29,11 +29,6 @@ if sys.argv[1]=="-s":
         os.system("sudo python2 core/server.py -apa")
       else:
         os.system("python2 core/server.py -apa")
-    elif sys.argv[2]=="nginx":
-      if system=="ubuntu":
-        os.system("sudo python2 core/server.py -ng")
-      else:
-        os.system("python2 core/server.py -ng")
     else:
       print "error : invalid arguments !!"
       print "use : myserver --help  for more information"
@@ -49,6 +44,11 @@ if sys.argv[1]=="-s":
         os.system("sudo python2 core/server.py -py "+sys.argv[3]+" "+sys.argv[4]+" "+sys.argv[5])
       else:
         os.system("python2 core/server.py -py "+sys.argv[3]+" "+sys.argv[4]+" "+sys.argv[5])
+    elif sys.argv[2]=="-ng":
+      if system=="ubuntu":
+        os.system("sudo python2 core/server.py -ng "+sys.argv[3]+" "+sys.argv[4]+" "+sys.argv[5])
+      else:
+        os.system("python2 core/server.py -ng "+sys.argv[3]+" "+sys.argv[4]+" "+sys.argv[5])
     else:
       print "error : invalid arguments !!"
       print "use : myserver --help  for more information"
@@ -130,12 +130,12 @@ elif sys.argv[1]=="--help" or sys.argv[1]=="help":
   print ""
   print " Commands:"
   print " -s <hostname> <port> <path>            to start default localhost server."
+  print " -s -ng <hostname> <port> <path>        to start php localhost server."
   print " -s -php <hostname> <port> <path>       to start php localhost server."
   print " -s -py <hostname> <port> <path>        to start python localhost server."
   print " -h <hostname> <localhost_port> <port>  to access localhost server on internet."
   print " -db [start/stop]                       to start/stop MySQL database server."
   print " -s apache                              to start apache web server."
-  print " -s nginx                               to start nginx web server."
   print " update                                 update MyServer."
   print " rm -t                                  uninstall MyServer."
   print " start                                  start MyServer menu."

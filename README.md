@@ -12,6 +12,8 @@ MyServer is your own localhost server. you can setup PHP, Apache and MySQL serve
 # How to use ?
 
 **CLI Use :**
+
+  **Example : `myserver -s -ng localhost 8080 /home/www`***
 - **myserver -s <hostname/ip> <localhost_port> <document_root_path>** to start default localhost server.
 - **myserver -s -ng <hostname/ip> <localhost_port> <document_root_path>** to start Nginx web server.
 - **myserver -s -php <hostname/ip> <localhost_port> <document_root_path>** to start php localhost server.
@@ -24,7 +26,8 @@ MyServer is your own localhost server. you can setup PHP, Apache and MySQL serve
 - **myserver start** start MyServer menu.
 - **myserver -s** to start Server that were previously running.
 - **myserver -h** to access from web that was previously accessed.
-  
+
+
 **menual Use :**
 - Type 1 : to start your localhost web server.
 - Type 2 : to access your website from internet.

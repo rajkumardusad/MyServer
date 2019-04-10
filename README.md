@@ -24,7 +24,7 @@ MyServer is your own localhost server. you can setup PHP, Apache and MySQL serve
 - **myserver update update** MyServer.
 - **myserver rm -t** uninstall MyServer.
 - **myserver start** start MyServer menu.
-- **myserver -s** to start Server that were previously running.
+- **myserver -s** to start Server that was previously running.
 - **myserver -h** to access from web that was previously accessed.
 
 

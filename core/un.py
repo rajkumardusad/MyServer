@@ -7,7 +7,6 @@ import sys
 import os
 from time import sleep
 from system import *
-from ux import *
 from logo import *
 
 class Un(object):

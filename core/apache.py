@@ -33,29 +33,31 @@ class apache_server(object):
     Mylogo()
     if os.path.exists(bpath+"apachectl"):
       print("\n\n \007\033[01;33m Apache web server\033[01;32m is running .....")
-      stop=input(" \033[01;33m Press \033[01;36m0\033[01;33m to stop server >>\033[01;36m ");
+      stop=input(" \033[01;33m Press \033[01;36m0\033[01;33m to stop server >>\033[00m ");
       if stop=="0":
-        os.system("rm -rf /data/data/com.termux/files/usr/var/run/apache2/httpd.pid")
         os.system("apachectl stop")
-        sleep(1)
+        sleep(2)
+        print("\n\007\033[01;33mApache web server\033[01;31m stopped !! \033[00m")
         sys.exit()
       else:
         self.apa()
     elif os.path.exists("/usr/sbin/apachectl"):
       print("\n\n \007\033[01;33m Apache web server\033[01;32m is running .....")
-      stop=input(" \033[01;33m Press \033[01;36m0\033[01;33m to stop server >>\033[01;36m ");
+      stop=input(" \033[01;33m Press \033[01;36m0\033[01;33m to stop server >>\033[00m ");
       if stop=="0":
         os.system("apachectl stop")
-        sleep(1)
+        sleep(2)
+        print("\n\007\033[01;33mApache web server\033[01;31m stopped !! \033[00m")
         sys.exit()
       else:
         self.apa()
     elif os.path.exists("/usr/sbin/apache2"):
       print("\n\n \007\033[01;33m Apache web server\033[01;32m is running .....")
-      stop=input(" \033[01;33m Press \033[01;36m0\033[01;33m to stop server >>\033[01;36m ");
+      stop=input(" \033[01;33m Press \033[01;36m0\033[01;33m to stop server >>\033[00m ");
       if stop=="0":
         os.system("apache2 stop")
-        sleep(1)
+        sleep(2)
+        print("\n\007\033[01;33mApache web server\033[01;31m stopped !! \033[00m")
         sys.exit()
       else:
         self.apa()

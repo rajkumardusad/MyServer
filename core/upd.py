@@ -13,7 +13,7 @@ class upd(object):
   def chk_upd(self):
     while True:
       Mylogo()
-      askv = input("\n\033[1;33m Do you want to Update MyServer [\033[01;32mY/n\033[01;33m] >> \033[1;36m")
+      askv = input("\n\033[1;33m Do you want to Update MyServer [\033[01;32mY/n\033[01;33m] >> \033[00m")
       if askv == "n" or askv == "N":
         break
       elif askv == "Y" or askv == "y":

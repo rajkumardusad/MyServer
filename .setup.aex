@@ -6,20 +6,12 @@
 import sys
 import os
 from time import sleep
-from modules.system import *
-from modules.ux import *
+from core.system import *
 from modules.logo import *
 
 class setu(object):
   def rem(self):
-    if os.path.exists(bpath+"myserver"):
-      if system=="ubuntu":
-        os.system("sudo rm -rf "+spath+"MyServer && rm -rf "+bpath+"myserver")
-        os.system("cd "+spath+" && sudo rm -rf .path.aex .port.aex .host.aex .serv.lock .h.lock")
-      else:
-        os.system("rm -rf "+spath+"MyServer && rm -rf "+bpath+"myserver")
-        os.system("cd "+spath+" && rm -rf .path.aex .port.aex .host.aex .serv.lock .h.lock")
-    else:
+    if os.path.exists(bpath+"myserver") or os.path.exists(spath+"MyServer"):
       if system=="ubuntu":
         os.system("sudo rm -rf "+spath+"MyServer && rm -rf "+bpath+"myserver")
         os.system("cd "+spath+" && sudo rm -rf .path.aex .port.aex .host.aex .serv.lock .h.lock")
@@ -33,67 +25,40 @@ class setu(object):
       Mylogo()
       print("\n\033[01;33m\007Installing MyServer .....\n")
       os.system("sudo mkdir "+spath+"MyServer")
-      os.system("sudo mv -v core/myserver /usr/bin")
+      os.system("sudo mv -v core/myserver "+bpath)
       os.system("sudo mv -v core modules MyServer.py .MyServer.py LICENSE "+spath+"MyServer")
-      os.system("sudo chmod +x /usr/bin/myserver")
+      os.system("sudo chmod +x "+bpath+"myserver")
       os.system("sudo chmod +x "+spath+"MyServer/MyServer.py .MyServer.py")
       os.system("sudo chmod +x "+spath+"MyServer/modules/* *.* .* .*.*")
       os.system("sudo chmod +x "+spath+"MyServer/core/* *.* .* .*.*")
       os.system("cd .. && sudo rm -rf MyServer")
-      os.system("sudo rm -rf "+home+"MyServer")
       sleep(1)
       Mylogo()
       sleep(1)
       print("\n\033[01;33m\007   [\033[01;31m+\033[01;33m] \033[01;32mInstalled MyServer.")
-      print("\033[01;33m   [\033[01;31m+\033[01;33m] \033[01;32mType :- \033[01;33mmyserver start \033[01;32mto start myserver\033[00m\n")
-
-    elif system=="termux":
-      Mylogo()
-      print("\n\033[01;33m\007Installing MyServer .....\n")
-      os.system("mv -v core/myserver /data/data/com.termux/files/usr/bin")
-      os.system("chmod +x /data/data/com.termux/files/usr/bin/myserver")
-      os.system("mkdir "+spath+"MyServer")
-      os.system("mv -v MyServer.py .MyServer.py LICENSE core modules "+spath+"MyServer")
-      os.system("chmod +x "+spath+"MyServer/MyServer.py .MyServer.py")
-      os.system("chmod +x "+spath+"MyServer/modules/* *.* .* .*.*")
-      os.system("chmod +x "+spath+"MyServer/core/* *.* .* .*.*")
-      os.system("rm -rf ~/MyServer")
-      os.system("cd .. && rm -rf MyServer")
-      sleep(1)
-      Mylogo()
-      sleep(1)
-      print("\n\033[01;33m\007   [\033[01;31m+\033[01;33m] \033[01;32mInstalled MyServer.")
-      print("\033[01;33m   [\033[01;31m+\033[01;33m] \033[01;32mType :- \033[01;33mmyserver start \033[01;32mto start myserver\033[00m\n")
+      print("\033[01;33m   [\033[01;31m+\033[01;33m] \033[01;32mType :- \033[01;33mmyserver help \033[01;32mfor more information.\033[00m\n")
 
     else:
       Mylogo()
       print("\n\033[01;33m\007Installing MyServer .....\n")
       os.system("mkdir "+spath+"MyServer")
-      os.system("mv -v core/myserver /usr/bin")
+      os.system("mv -v core/myserver "+bpath)
       os.system("mv -v core modules MyServer.py .MyServer.py LICENSE "+spath+"MyServer")
-      os.system("chmod +x /usr/bin/myserver")
+      os.system("chmod +x "+bpath+"myserver")
       os.system("chmod +x "+spath+"MyServer/MyServer.py .MyServer.py")
       os.system("chmod +x "+spath+"MyServer/modules/* .* .*.* *.*")
       os.system("chmod +x "+spath+"MyServer/core/* .* .*.* *.*")
-      os.system("rm -rf "+home+"MyServer")
       os.system("cd .. && rm -rf MyServer")
       sleep(1)
       Mylogo()
       sleep(1)
       print("\n\033[01;33m\007   [\033[01;31m+\033[01;33m] \033[01;32mInstalled MyServer.")
-      print("\033[01;33m   [\033[01;31m+\033[01;33m] \033[01;32mType :- \033[01;33mmyserver start \033[01;32mto start myserver\033[00m\n")
+      print("\033[01;33m   [\033[01;31m+\033[01;33m] \033[01;32mType :- \033[01;33mmyserver help \033[01;32mfor more information.\033[00m\n")
 
 
 def MyServer():
   try:
-	setu().setup()
-
+    setu().setup()
   except KeyboardInterrupt:
-	sleep(1)
-	print("\n \007\033[01;31mExiting .........")
-	sleep(1)
-	print(" \033[01;32mG00D By .......... :)\n")
-	sleep(1)
-	print("\007\033[00m")
-	sys.exit()
+    exit()
 MyServer()

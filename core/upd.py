@@ -11,7 +11,7 @@ from logo import *
 
 class Upd(object):
   def U(self):
-	while True:
+    while True:
 		Mylogo()
 		askv = raw_input('''\n\033[1;33m Do you want to Update MyServer [\033[01;32mY/n\033[01;33m] >> \033[00m''')
 		if askv == "n" or askv == "N":

@@ -28,7 +28,7 @@ MyServer is your own localhost server. you can setup PHP, Apache and MySQL serve
 - `myserver -h` to access from web that was previously accessed.
 
 
-**menual Use :**
+**Manual Use :**
 - Type 1 : to start your localhost web server.
 - Type 2 : to access your website from internet.
 - Type 3 : to start MySQL Database server.

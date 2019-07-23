@@ -12,7 +12,7 @@ from logo import *
 
 class Un(object):
   def Uni(self):
-	while True:
+    while True:
 		Mylogo()
 		ask = raw_input('''\n\n\033[1;33m Do you want to uninstall MyServer [\033[01;32mY/n\033[01;33m] >> \033[00m''')
 		if ask == "n" or ask == "N":

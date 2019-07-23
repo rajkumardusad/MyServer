@@ -34,7 +34,6 @@ class setu(object):
       os.system("cd .. && sudo rm -rf MyServer")
       sleep(1)
       Mylogo()
-      sleep(1)
       print("\n\033[01;33m\007   [\033[01;31m+\033[01;33m] \033[01;32mInstalled MyServer.")
       print("\033[01;33m   [\033[01;31m+\033[01;33m] \033[01;32mType :- \033[01;33mmyserver help \033[01;32mfor more information.\033[00m\n")
 
@@ -51,7 +50,6 @@ class setu(object):
       os.system("cd .. && rm -rf MyServer")
       sleep(1)
       Mylogo()
-      sleep(1)
       print("\n\033[01;33m\007   [\033[01;31m+\033[01;33m] \033[01;32mInstalled MyServer.")
       print("\033[01;33m   [\033[01;31m+\033[01;33m] \033[01;32mType :- \033[01;33mmyserver help \033[01;32mfor more information.\033[00m\n")
 

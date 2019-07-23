@@ -35,9 +35,9 @@ class apache_server(object):
       print("\n\n \007\033[01;33m Apache web server\033[01;32m is running .....")
       stop=input(" \033[01;33m Press \033[01;36m0\033[01;33m to stop server >>\033[01;36m ");
       if stop=="0":
-        os.system("rm -rf /data/data/com.termux/files/usr/var/run/apache2/httpd.pid")
         os.system("apachectl stop")
-        sleep(1)
+        sleep(2)
+        print("\n\007\033[01;33mApache web server\033[01;31m stopped !! \033[00m")
         sys.exit()
       else:
         self.apa()
@@ -46,7 +46,8 @@ class apache_server(object):
       stop=input(" \033[01;33m Press \033[01;36m0\033[01;33m to stop server >>\033[01;36m ");
       if stop=="0":
         os.system("apachectl stop")
-        sleep(1)
+        sleep(2)
+        print("\n\007\033[01;33mApache web server\033[01;31m stopped !! \033[00m")
         sys.exit()
       else:
         self.apa()
@@ -55,7 +56,8 @@ class apache_server(object):
       stop=input(" \033[01;33m Press \033[01;36m0\033[01;33m to stop server >>\033[01;36m ");
       if stop=="0":
         os.system("apache2 stop")
-        sleep(1)
+        sleep(2)
+        print("\n\007\033[01;33mApache web server\033[01;31m stopped !! \033[00m")
         sys.exit()
       else:
         self.apa()

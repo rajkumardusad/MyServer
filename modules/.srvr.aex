@@ -1,0 +1,100 @@
+# Tool Name :- MyServer
+# Author :- Rajkumar Dusad
+# Date :- 23/5/2018
+
+import os
+import sys
+from time import sleep
+
+def loading():
+  while True:
+    os.system("clear")
+    print ('''\n\n\n''')
+    print ('''\033[1;32m\007 Starting Server ..........\033[1;33m\ \033[00m \n\n\n''')
+    sleep(0.1)
+
+    os.system("clear")
+    print ('''\n\n\n''')
+    print ('''\033[1;32m Starting Server ..........\033[1;33m-\033[00m \n\n\n''')
+    sleep(0.1)
+
+    os.system("clear")
+    print ('''\n\n\n''')
+    print ('''\033[1;32m Starting Server ..........\033[1;33m/\033[00m \n\n\n''')
+    sleep(0.1)
+
+    os.system("clear")
+    print ('''\n\n\n''')
+    print ('''\033[1;32m Starting Server ..........\033[1;33m-\033[00m \n\n\n''')
+    sleep(0.1)
+
+    os.system("clear")
+    print ('''\n\n\n''')
+    print ('''\033[1;32m Starting Server ..........\033[1;33m\ \033[00m \n\n\n''')
+    sleep(0.1)
+
+    os.system("clear")
+    print ('''\n\n\n''')
+    print ('''\033[1;32m Starting Server ..........\033[1;33m-\033[00m \n\n\n''')
+    sleep(0.1)
+
+    os.system("clear")
+    print ('''\n\n\n''')
+    print ('''\033[1;32m Starting Server ..........\033[1;33m/\033[00m \n\n\n''')
+    sleep(0.1)
+
+    os.system("clear")
+    print ('''\n\n\n''')
+    print ('''\033[1;32m Starting Server ..........\033[1;33m-\033[00m \n\n\n''')
+    sleep(0.1)
+
+
+
+    os.system("clear")
+    print ('''\n\n\n''')
+    print ('''\033[1;32m Starting Server ..........\033[1;33m\ \033[00m \n\n\n''')
+    sleep(0.1)
+
+    os.system("clear")
+    print ('''\n\n\n''')
+    print ('''\033[1;32m Starting Server ..........\033[1;33m-\033[00m \n\n\n''')
+    sleep(0.1)
+
+    os.system("clear")
+    print ('''\n\n\n''')
+    print ('''\033[1;32m Starting Server ..........\033[1;33m/\033[00m \n\n\n''')
+    sleep(0.1)
+
+    os.system("clear")
+    print ('''\n\n\n''')
+    print ('''\033[1;32m Starting Server ..........\033[1;33m-\033[00m \n\n\n''')
+    sleep(0.1)
+
+    os.system("clear")
+    print ('''\n\n\n''')
+    print ('''\033[1;32m Starting Server ..........\033[1;33m\ \033[00m \n\n\n''')
+    sleep(0.1)
+
+    os.system("clear")
+    print ('''\n\n\n''')
+    print ('''\033[1;32m Starting Server ..........\033[1;33m-\033[00m \n\n\n''')
+    sleep(0.1)
+
+    os.system("clear")
+    print ('''\n\n\n''')
+    print ('''\033[1;32m Starting Server ..........\033[1;33m/\033[00m \n\n\n''')
+    sleep(0.1)
+
+    os.system("clear")
+    print ('''\n\n\n''')
+    print ('''\033[1;32m Starting Server ..........\033[1;33m-\033[00m \n\n\n''')
+    sleep(0.1)
+    sys.exit()
+
+def Server():
+  try:
+    loading()
+  except KeyboardInterrupt:
+    os.system("clear")
+    sys.exit()
+Server()

@@ -7,7 +7,6 @@ import sys
 import os
 from time import sleep
 from system import *
-from ux import *
 from logo import *
 
 class Upd(object):
@@ -31,7 +30,6 @@ class Upd(object):
 			  os.system("cd "+home+" && git clone https://github.com/Rajkumrdusad/MyServer.git")
 			if os.path.exists(home+"MyServer"):
 			  os.system("cd "+home+"MyServer && sh install")
-			  os.system("clear")
 			  Mylogo()
 			  sleep(1)
 			  os.system("clear")

@@ -7,7 +7,6 @@ import sys
 import os
 from time import sleep
 from system import *
-from ux import *
 from logo import *
 
 if sys.argv[1]=="-s":
@@ -16,9 +15,9 @@ if sys.argv[1]=="-s":
     sr=s.read()
     s.close()
     if system=="ubuntu":
-      os.system("sudo python2 core/server.py "+sr)
+      os.system("sudo python core/server.py "+sr)
     else:
-      os.system("python2 core/server.py "+sr)
+      os.system("python core/server.py "+sr)
   else:
     pass
 elif sys.argv[1]=="-h":
@@ -27,8 +26,8 @@ elif sys.argv[1]=="-h":
     sr=s.read()
     s.close()
     if system=="ubuntu":
-      os.system("sudo python2 core/host.py "+sr)
+      os.system("sudo python core/host.py "+sr)
     else:
-      os.system("python2 core/host.py "+sr)
+      os.system("python core/host.py "+sr)
   else:
     pass

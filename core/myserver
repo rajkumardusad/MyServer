@@ -4,8 +4,8 @@
 # Powered By :- Aex Software's
 if [ -d /data/data/com.termux/files/usr/share/MyServer ];then
   cd /data/data/com.termux/files/usr/share/MyServer
-  exec python2 MyServer.py $@
+  exec python MyServer.py $@
 else
   cd /usr/share/MyServer
-  exec python2 MyServer.py $@
+  exec python MyServer.py $@
 fi

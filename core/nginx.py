@@ -1,9 +1,10 @@
 import sys
 import os
 
-def ngi(por,path):
+def ngi(por,path,host):
   port=por
   droot=path
+  hostname=host
   scr="""
 #user  nobody;
 worker_processes  1;
@@ -40,7 +41,7 @@ http {
 
     server {
         listen       """+port+""";
-        server_name  localhost;
+        server_name  """+hostname+""";
 
         #charset koi8-r;
 

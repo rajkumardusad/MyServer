@@ -5,6 +5,7 @@
 
 import sys
 import os
+from time import sleep
 
 if os.path.exists("/data/data/com.termux/files/usr/bin/pkg"):
   pac="pkg"
@@ -25,3 +26,12 @@ elif os.path.exists("/usr/bin/apt") or os.path.exists("/usr/bin/apt-get") or os.
       bpath="/usr/bin/"
       spath="/usr/share/"
       system="debian"
+
+def exit():
+  sleep(1)
+  print("\n \007\033[01;31mExiting .........")
+  sleep(1)
+  print(" \007\033[01;32mG00D By .......... :)")
+  sleep(1)
+  print("\033[00m")
+  sys.exit()

@@ -29,7 +29,7 @@ class py_web(object):
     Mylogo()
     print("\n\033[01;33mStarting Server ......\033[00m\n")
     print("\033[01;33mYour Server URL is :- \033[01;36mhttp://"+host+":"+port+"/\033[00m\n")
-    os.system("cd "+gp+" && python -m http.server "+port+" --bind "+host)
+    os.system("cd "+gp+" && python3 -m http.server "+port+" --bind "+host)
     print("\n\007\033[01;31munfortunately server stopped\n\033[00m")
     sys.exit()
 

@@ -22,5 +22,5 @@ if [ ! -d /usr/bin ];then
     pkg install python -y
   fi
 fi
-python .setup.aex
+python3 .setup.aex
 exit

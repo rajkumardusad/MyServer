@@ -32,15 +32,13 @@ class MySQL(object):
       print("\n\033[01;33mStarting Server ......\033[00m\n")
       if os.path.exists("/usr/lib/sudo"):
         os.system("sudo service mysql start")
-        os.system("sudo mysql -u "+usrnm+" -p")
-        print("\n\033[01;31munfortunately server stopped\n\033[00m")
+        print("\n\033[01;32mMySQL Server is running..\n\033[00m")
       elif system=="ubuntu":
         os.system("sudo systemctl mysql start")
-        os.system("sudo mysql -u "+usrnm+" -p")
-        print("\n\033[01;31munfortunately server stopped\n\033[00m")
+        print("\n\033[01;32mMySQL Server is running..\n\033[00m")
       else:
         os.system("service mysql start")
-        os.system("mysql -u "+usrnm+" -p")
+        print("\n\033[01;32mMySQL Server is running..\n\033[00m")
       sys.exit()
 
   def mysqlst(self):

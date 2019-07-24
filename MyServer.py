@@ -19,16 +19,16 @@ if sys.argv[1]=="-s":
 
   if len(sys.argv)==2:
     if system=="ubuntu":
-      os.system("sudo python core/s.py "+sys.argv[1])
+      os.system("sudo python3 core/s.py "+sys.argv[1])
     else:
-      os.system("python core/s.py "+sys.argv[1])
+      os.system("python3 core/s.py "+sys.argv[1])
 
   elif len(sys.argv)==3:
     if sys.argv[2]=="apache":
       if system=="ubuntu":
-        os.system("sudo python core/server.py -apa")
+        os.system("sudo python3 core/server.py -apa")
       else:
-        os.system("python core/server.py -apa")
+        os.system("python3 core/server.py -apa")
     else:
       print ("error : invalid arguments !!")
       print ("use : myserver --help  for more information")
@@ -36,28 +36,28 @@ if sys.argv[1]=="-s":
   elif len(sys.argv)==6:
     if sys.argv[2]=="-php":
       if system=="ubuntu":
-        os.system("sudo python core/server.py -php "+sys.argv[3]+" "+sys.argv[4]+" "+sys.argv[5])
+        os.system("sudo python3 core/server.py -php "+sys.argv[3]+" "+sys.argv[4]+" "+sys.argv[5])
       else:
-        os.system("python core/server.py -php "+sys.argv[3]+" "+sys.argv[4]+" "+sys.argv[5])
+        os.system("python3 core/server.py -php "+sys.argv[3]+" "+sys.argv[4]+" "+sys.argv[5])
     elif sys.argv[2]=="-py":
       if system=="ubuntu":
-        os.system("sudo python core/server.py -py "+sys.argv[3]+" "+sys.argv[4]+" "+sys.argv[5])
+        os.system("sudo python3 core/server.py -py "+sys.argv[3]+" "+sys.argv[4]+" "+sys.argv[5])
       else:
-        os.system("python core/server.py -py "+sys.argv[3]+" "+sys.argv[4]+" "+sys.argv[5])
+        os.system("python3 core/server.py -py "+sys.argv[3]+" "+sys.argv[4]+" "+sys.argv[5])
     elif sys.argv[2]=="-ng":
       if system=="ubuntu":
-        os.system("sudo python core/server.py -ng "+sys.argv[3]+" "+sys.argv[4]+" "+sys.argv[5])
+        os.system("sudo python3 core/server.py -ng "+sys.argv[3]+" "+sys.argv[4]+" "+sys.argv[5])
       else:
-        os.system("python core/server.py -ng "+sys.argv[3]+" "+sys.argv[4]+" "+sys.argv[5])
+        os.system("python3 core/server.py -ng "+sys.argv[3]+" "+sys.argv[4]+" "+sys.argv[5])
     else:
       print ("error : invalid arguments !!")
       print ("use : myserver --help  for more information")
 
   elif len(sys.argv)==5:
     if system=="ubuntu":
-      os.system("sudo python core/server.py -d "+sys.argv[2]+" "+sys.argv[3]+" "+sys.argv[4])
+      os.system("sudo python3 core/server.py -d "+sys.argv[2]+" "+sys.argv[3]+" "+sys.argv[4])
     else:
-      os.system("python core/server.py -d "+sys.argv[2]+" "+sys.argv[3]+" "+sys.argv[4])
+      os.system("python3 core/server.py -d "+sys.argv[2]+" "+sys.argv[3]+" "+sys.argv[4])
   else:
     print ("error : invalid arguments !!")
     print ("use : myserver --help  for more information")
@@ -65,15 +65,15 @@ if sys.argv[1]=="-s":
 elif sys.argv[1]=="-h":
   if len(sys.argv)==2:
     if system=="ubuntu":
-      os.system("sudo python core/s.py "+sys.argv[1])
+      os.system("sudo python3 core/s.py "+sys.argv[1])
     else:
-      os.system("python core/s.py "+sys.argv[1])
+      os.system("python3 core/s.py "+sys.argv[1])
 
   elif len(sys.argv)==5:
     if system=="ubuntu":
-      os.system("sudo python core/host.py "+sys.argv[2]+" "+sys.argv[3]+" "+sys.argv[4])
+      os.system("sudo python3 core/host.py "+sys.argv[2]+" "+sys.argv[3]+" "+sys.argv[4])
     else:
-      os.system("python core/host.py "+sys.argv[2]+" "+sys.argv[3]+" "+sys.argv[4])
+      os.system("python3 core/host.py "+sys.argv[2]+" "+sys.argv[3]+" "+sys.argv[4])
 
   else:
     print ("error : invalid arguments")
@@ -83,14 +83,14 @@ elif sys.argv[1]=="-db":
   if len(sys.argv)==3:
     if sys.argv[2]=="start":
       if system=="ubuntu":
-        os.system("sudo python core/mysql.py "+sys.argv[2])
+        os.system("sudo python3 core/mysql.py "+sys.argv[2])
       else:
-        os.system("python core/mysql.py "+sys.argv[2])
+        os.system("python3 core/mysql.py "+sys.argv[2])
     elif sys.argv[2]=="stop":
       if system=="ubuntu":
-        os.system("sudo python core/mysql.py "+sys.argv[2])
+        os.system("sudo python3 core/mysql.py "+sys.argv[2])
       else:
-        os.system("python core/mysql.py "+sys.argv[2])
+        os.system("python3 core/mysql.py "+sys.argv[2])
     else:
       print ("error : invalid arguments !!")
       print ("use : myserver --help  for more information")
@@ -102,9 +102,9 @@ elif sys.argv[1]=="rm":
   if len(sys.argv)==3:
     if sys.argv[2]=="-T" or sys.argv[2]=="-t":
       if system=="ubuntu":
-        os.system("sudo python core/un.py")
+        os.system("sudo python3 core/un.py")
       else:
-        os.system("python core/un.py")
+        os.system("python3 core/un.py")
     else:
       print ("error : invalid arguments")
       print ("use : myserver --help  for more information")
@@ -114,15 +114,15 @@ elif sys.argv[1]=="rm":
 
 elif sys.argv[1]=="update":
   if system=="ubuntu":
-    os.system("sudo python core/upd.py")
+    os.system("sudo python3 core/upd.py")
   else:
-    os.system("python core/upd.py")
+    os.system("python3 core/upd.py")
 
 elif sys.argv[1]=="start":
   if system=="ubuntu":
-    os.system("sudo python .MyServer.py")
+    os.system("sudo python3 .MyServer.py")
   else:
-     os.system("python .MyServer.py")
+     os.system("python3 .MyServer.py")
 
 elif sys.argv[1]=="--help" or sys.argv[1]=="-help" or sys.argv[1]=="help":
   print ("")

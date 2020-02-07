@@ -4,7 +4,7 @@ MyServer is your own localhost server. you can setup PHP, Apache and MySQL serve
 <br/><br/><br/>
 
 <p align="center">
-<img src="https://github.com/Rajkumrdusad/MyServer/blob/master/Scr/Screenshot_2018-08-03-20-16-17-1.png"/>
+<img src="https://github.com/rajkumardusad/MyServer/blob/master/Scr/Screenshot_2018-08-03-20-16-17-1.png"/>
 </p>
 
 <br/><br/><br/>
@@ -66,7 +66,7 @@ Open the termux app and type following commands.
 
 * `apt install git`
 
-* `git clone https://github.com/Rajkumrdusad/MyServer.git`
+* `git clone https://github.com/rajkumardusad/MyServer.git`
 
 * `cd MyServer`
 

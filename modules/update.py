@@ -25,9 +25,9 @@ class upd(object):
           os.system(pac+" update")
           os.system(pac+" install git -y")
         if system=="ubuntu":
-          os.system("cd "+home+" && sudo git clone https://github.com/Rajkumrdusad/MyServer.git")
+          os.system("cd "+home+" && sudo git clone https://github.com/rajkumardusad/MyServer.git")
         else:
-          os.system("cd "+home+" && git clone https://github.com/Rajkumrdusad/MyServer.git")
+          os.system("cd "+home+" && git clone https://github.com/rajkumardusad/MyServer.git")
         if os.path.exists(home+"MyServer"):
           os.system("cd "+home+"MyServer && sh install")
           os.system("clear")

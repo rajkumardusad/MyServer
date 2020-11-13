@@ -1,7 +1,6 @@
 # Tool Name :- MyServer
 # Author :- Rajkumar Dusad
 # Date :- 4/July/2019
-# Powered By :- Aex Software's
 
 import sys, os
 from time import sleep

@@ -1,7 +1,6 @@
 # Tool Name :- MyServer
 # Author :- Rajkumar Dusad
 # Date :- 13/11/2018 - 22/July/2019
-# Powered By :- Aex Software's
 
 import sys
 import os

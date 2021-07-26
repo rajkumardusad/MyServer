@@ -1,12 +1,18 @@
+#!/usr/bin/python3
 # Tool Name :- MyServer
 # Author :- Rajkumar Dusad
-# Date :- 13/11/2018 - 22/July/2019
+# Date :- 2021/26/7
 
 import sys
 import os
 from time import sleep
 from core.system import *
 
+if os.getuid() != 0:
+  pass
+else
+    print("\nerror: Please, Run This programm as Root!\n")
+    sys.exit()
 if len(sys.argv)>1:
   pass
 else:
@@ -25,7 +31,7 @@ if sys.argv[1]=="-s":
   elif len(sys.argv)==3:
     if sys.argv[2]=="apache":
       if system=="ubuntu":
-        os.system("sudo python3 core/server.py -apa")
+        os.system("python3 core/server.py -apa")
       else:
         os.system("python3 core/server.py -apa")
     else:
@@ -35,7 +41,7 @@ if sys.argv[1]=="-s":
   elif len(sys.argv)==6:
     if sys.argv[2]=="-php":
       if system=="ubuntu":
-        os.system("sudo python3 core/server.py -php "+sys.argv[3]+" "+sys.argv[4]+" "+sys.argv[5])
+        os.system("python3 core/server.py -php "+sys.argv[3]+" "+sys.argv[4]+" "+sys.argv[5])
       else:
         os.system("python3 core/server.py -php "+sys.argv[3]+" "+sys.argv[4]+" "+sys.argv[5])
     elif sys.argv[2]=="-py":
@@ -45,7 +51,7 @@ if sys.argv[1]=="-s":
         os.system("python3 core/server.py -py "+sys.argv[3]+" "+sys.argv[4]+" "+sys.argv[5])
     elif sys.argv[2]=="-ng":
       if system=="ubuntu":
-        os.system("sudo python3 core/server.py -ng "+sys.argv[3]+" "+sys.argv[4]+" "+sys.argv[5])
+        os.system("python3 core/server.py -ng "+sys.argv[3]+" "+sys.argv[4]+" "+sys.argv[5])
       else:
         os.system("python3 core/server.py -ng "+sys.argv[3]+" "+sys.argv[4]+" "+sys.argv[5])
     else:
@@ -54,7 +60,7 @@ if sys.argv[1]=="-s":
 
   elif len(sys.argv)==5:
     if system=="ubuntu":
-      os.system("sudo python3 core/server.py -d "+sys.argv[2]+" "+sys.argv[3]+" "+sys.argv[4])
+      os.system("python3 core/server.py -d "+sys.argv[2]+" "+sys.argv[3]+" "+sys.argv[4])
     else:
       os.system("python3 core/server.py -d "+sys.argv[2]+" "+sys.argv[3]+" "+sys.argv[4])
   else:
@@ -64,13 +70,13 @@ if sys.argv[1]=="-s":
 elif sys.argv[1]=="-h":
   if len(sys.argv)==2:
     if system=="ubuntu":
-      os.system("sudo python3 core/s.py "+sys.argv[1])
+      os.system("python3 core/s.py "+sys.argv[1])
     else:
       os.system("python3 core/s.py "+sys.argv[1])
 
   elif len(sys.argv)==5:
     if system=="ubuntu":
-      os.system("sudo python3 core/host.py "+sys.argv[2]+" "+sys.argv[3]+" "+sys.argv[4])
+      os.system("python3 core/host.py "+sys.argv[2]+" "+sys.argv[3]+" "+sys.argv[4])
     else:
       os.system("python3 core/host.py "+sys.argv[2]+" "+sys.argv[3]+" "+sys.argv[4])
 
@@ -82,12 +88,12 @@ elif sys.argv[1]=="-db":
   if len(sys.argv)==3:
     if sys.argv[2]=="start":
       if system=="ubuntu":
-        os.system("sudo python3 core/mysql.py "+sys.argv[2])
+        os.system("python3 core/mysql.py "+sys.argv[2])
       else:
         os.system("python3 core/mysql.py "+sys.argv[2])
     elif sys.argv[2]=="stop":
       if system=="ubuntu":
-        os.system("sudo python3 core/mysql.py "+sys.argv[2])
+        os.system("python3 core/mysql.py "+sys.argv[2])
       else:
         os.system("python3 core/mysql.py "+sys.argv[2])
     else:
@@ -113,13 +119,13 @@ elif sys.argv[1]=="rm":
 
 elif sys.argv[1]=="update":
   if system=="ubuntu":
-    os.system("sudo python3 core/upd.py")
+    os.system("python3 core/upd.py")
   else:
     os.system("python3 core/upd.py")
 
 elif sys.argv[1]=="start":
   if system=="ubuntu":
-    os.system("sudo python3 .MyServer.py")
+    os.system("python3 .MyServer.py")
   else:
      os.system("python3 .MyServer.py")
 

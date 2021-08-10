@@ -10,7 +10,7 @@ from core.system import *
 
 if os.getuid() != 0:
   pass
-else
+else:
     print("\nerror: Please, Run This programm as Root!\n")
     sys.exit()
 if len(sys.argv)>1:

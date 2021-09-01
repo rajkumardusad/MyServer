@@ -8,7 +8,7 @@ import os
 from time import sleep
 from core.system import *
 
-if os.getuid() != 0:
+if os.getuid() == 0:
   pass
 else:
     print("\nerror: Please, Run This programm as Root!\n")

@@ -2,7 +2,7 @@
 # Tool Name :- MyServer
 # Date :- 23/5/2018 - 22/July/2019
 
-function main() {
+main() {
        if [ -e  /usr/lib/sudo ];then
         if [ ! -e /usr/bin/python3 ];then
          apt-get update
